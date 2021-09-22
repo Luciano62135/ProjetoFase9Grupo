@@ -6,7 +6,10 @@ using Photon.Realtime;
 
 public class CharacterController : MonoBehaviour
 {
+    public Animator anim;
+
     public float velocidadeDeMovimento;
+
     private Rigidbody rig;
 
     private Vector3 BotaoDeMovimento;
@@ -18,12 +21,12 @@ public class CharacterController : MonoBehaviour
 
     //[SerializeField]
     //private PhotonView pv;
-    // Start is called before the first frame update
     void Start()
     {
        // pv = GetComponent<PhotonView>();
         rig = GetComponent<Rigidbody>();
         camera = FindObjectOfType<Camera>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,19 +35,58 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(new Vector3(0, 0, 6 * Time.deltaTime));
+            anim.SetBool("AndandoFrente", true);
+        }
+        else
+        {
+            anim.SetBool("AndandoFrente", false);
         }
         if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(new Vector3(0, 0, -6 * Time.deltaTime));
+            anim.SetBool("AndandoTras", true);
+        }
+        else
+        {
+            anim.SetBool("AndandoTras", false);
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(new Vector3( 6 * Time.deltaTime, 0, 0));
+            anim.SetBool("AndandoDireita", true);
+        }
+        else
+        {
+            anim.SetBool("AndandoDireita", false);
         }
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(new Vector3( -6 * Time.deltaTime, 0, 0));
+            anim.SetBool("AndandoEsquerda", true);
         }
+        else
+        {
+            anim.SetBool("AndandoEsquerda", false);
+        }
+
+        //script de movimento paladino
+        
+        /*if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Mouse1))
+        {
+            transform.Translate(new Vector3(0, 0, -3 * Time.deltaTime));
+        }
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.Mouse1))
+        {
+            transform.Translate(new Vector3(0, 0, 3 * Time.deltaTime));
+        }
+        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.Mouse1))
+        {
+            transform.Translate(new Vector3(-3 * Time.deltaTime, 0, 0));
+        }
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.Mouse1))
+        {
+            transform.Translate(new Vector3(3 * Time.deltaTime, 0, 0));
+        }*/
 
 
         Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);

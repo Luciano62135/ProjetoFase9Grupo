@@ -570,7 +570,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -584,7 +584,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -602,8 +602,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ec9bccc2d29da4a876856821e5f82f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1633435132}
   velocidadeDeMovimento: 400
   vida: 100
+--- !u!95 &1633435132 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: cb7ad013aeee4a440821c8086bf4e639,
+    type: 3}
+  m_PrefabInstance: {fileID: 1914509573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1796540010
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +623,7 @@ GameObject:
   - component: {fileID: 1796540013}
   - component: {fileID: 1796540012}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Moeda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -698,7 +705,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb7ad013aeee4a440821c8086bf4e639,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb7ad013aeee4a440821c8086bf4e639,
         type: 3}
@@ -745,5 +752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ybot
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: cb7ad013aeee4a440821c8086bf4e639,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fd01bb3f9f3559e4e9ad9dc3e5334677, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7ad013aeee4a440821c8086bf4e639, type: 3}
