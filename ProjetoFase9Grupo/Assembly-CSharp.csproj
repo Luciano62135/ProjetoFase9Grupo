@@ -79,11 +79,17 @@
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\Movimentação.cs" />
+    <Compile Include="Assets\Scripts\HudScripts\PlayerHud.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\Buttons.cs" />
+    <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedaCobreScript.cs" />
+    <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedaOuroScript.cs" />
+    <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedaPrataScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\AssassinoScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\CavaleiroScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\CharacterController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\MagoScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PaladinoScript.cs" />
+    <Compile Include="Assets\Scripts\Testes\EntrandoOnline.cs" />
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />

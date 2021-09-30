@@ -104,4 +104,13 @@ public class CavaleiroScript : MonoBehaviour
             anim.SetBool("AtacandoNormal", false);
         }
     }
+
+    public void TakeDamage(float dano)
+    {
+        vida -= dano;
+        if (vida <= 0f)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

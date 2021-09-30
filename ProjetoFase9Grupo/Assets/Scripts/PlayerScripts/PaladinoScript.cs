@@ -122,4 +122,13 @@ public class PaladinoScript : MonoBehaviour
             transform.Translate(new Vector3(3 * Time.deltaTime, 0, 0));
         }
     }
+
+    public void TakeDamage(float dano)
+    {
+        vida -= dano;
+        if (vida <= 0f)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
