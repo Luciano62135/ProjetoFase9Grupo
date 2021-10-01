@@ -289,10 +289,10 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-      <HintPath>E:/ProjetosUnity/Projetos Unity/ProjetoFase9Grupo/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
+      <HintPath>E:/RepositoriosGitHub/ProjetoFase9Grupo/ProjetoFase9Grupo/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>E:/ProjetosUnity/Projetos Unity/ProjetoFase9Grupo/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>E:/RepositoriosGitHub/ProjetoFase9Grupo/ProjetoFase9Grupo/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>E:/unity2019.4.19f1/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -640,10 +640,10 @@
       <HintPath>E:/unity2019.4.19f1/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>E:/ProjetosUnity/Projetos Unity/ProjetoFase9Grupo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>E:/RepositoriosGitHub/ProjetoFase9Grupo/ProjetoFase9Grupo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>E:/ProjetosUnity/Projetos Unity/ProjetoFase9Grupo/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>E:/RepositoriosGitHub/ProjetoFase9Grupo/ProjetoFase9Grupo/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
