@@ -971,7 +971,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1633435128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c270d199901100b42bade36e18c9e127, type: 3}
+  m_Script: {fileID: 11500000, guid: b408ad0610db58d4c996c48890077aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1633435132}
@@ -1294,6 +1294,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: c289eb6e073102f4f87ec93e867bfe42, type: 2}
+      objectReference: {fileID: 9100000, guid: 577b950ba75681047a35dac62e3f9a8b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7ad013aeee4a440821c8086bf4e639, type: 3}
