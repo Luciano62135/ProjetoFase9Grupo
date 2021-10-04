@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerHud : MonoBehaviour
 {
+    public int pocoes;
+    public Text pocoesText;
+    public float cura = 30;
+
     public int Moedas;
     public Text MoedasText;
 
@@ -18,5 +22,6 @@ public class PlayerHud : MonoBehaviour
     void Update()
     {
         MoedasText.text = "" + Moedas;
+        pocoesText.text = "" + pocoes;
     }
 }

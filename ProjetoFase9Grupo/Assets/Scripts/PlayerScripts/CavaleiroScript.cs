@@ -15,14 +15,23 @@ public class CavaleiroScript : MonoBehaviour
 
     private Camera camera;
 
-    public float vida = 100;
+    public float vidaAtual;
+    public float vidaMaxima = 100;
 
     public bool estaAtacando = false;
+
+    private PlayerHud playerHud;
+
+    public BarraDeVida barraDeVida;
 
     //[SerializeField]
     //private PhotonView pv;
     void Start()
     {
+        vidaAtual = vidaMaxima;
+        barraDeVida.SetarVidaMaxima(vidaMaxima);
+
+        playerHud = GameObject.Find("Canvas").GetComponent<PlayerHud>();
         // pv = GetComponent<PhotonView>();
         rig = GetComponent<Rigidbody>();
         camera = FindObjectOfType<Camera>();
@@ -32,6 +41,7 @@ public class CavaleiroScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        BotoesDeInteracao();
         BotoesDeMovimento();
 
         Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
@@ -105,10 +115,27 @@ public class CavaleiroScript : MonoBehaviour
         }
     }
 
+    /*Esses botões de interação sera usado para fazer o player usar itens consumiveis como a poção de vida, os outros tipos de interaçao
+     * como abrir portas ou pegar itens vai ficar em scripts separados.
+    */
+    public void BotoesDeInteracao()
+    {
+        if (Input.GetButtonDown("UsarCura") && playerHud.pocoes > 0)
+        {
+            playerHud.pocoes--;
+            vidaAtual += playerHud.cura;
+            if (vidaAtual > vidaMaxima)
+            {
+                vidaAtual = vidaMaxima;
+            }
+        }
+    }
+
     public void TakeDamage(float dano)
     {
-        vida -= dano;
-        if (vida <= 0f)
+        vidaAtual -= dano;
+        barraDeVida.SetarVida(vidaAtual);
+        if (vidaAtual <= 0f)
         {
             Destroy(this.gameObject);
         }

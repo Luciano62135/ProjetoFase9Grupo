@@ -17,14 +17,23 @@ public class PaladinoScript : MonoBehaviour
 
     private Camera camera;
 
-    public float vida = 100;
+    public float vidaAtual;
+    public float vidaMaxima = 100;
 
     public bool estaAtacando = false;
+
+    private PlayerHud playerHud;
+
+    public BarraDeVida barraDeVida;
 
     //[SerializeField]
     //private PhotonView pv;
     void Start()
     {
+        vidaAtual = vidaMaxima;
+        barraDeVida.SetarVidaMaxima(vidaMaxima);
+
+        playerHud = GameObject.Find("Canvas").GetComponent<PlayerHud>();
         // pv = GetComponent<PhotonView>();
         rig = GetComponent<Rigidbody>();
         camera = FindObjectOfType<Camera>();
@@ -34,6 +43,7 @@ public class PaladinoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        BotoesDeInteracao();
         BotoesDeMovimentacao();
 
         Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
@@ -123,10 +133,27 @@ public class PaladinoScript : MonoBehaviour
         }
     }
 
+    /*Esses botões de interação sera usado para fazer o player usar itens consumiveis como a poção de vida, os outros tipos de interaçao
+     * como abrir portas ou pegar itens vai ficar em scripts separados.
+    */
+    public void BotoesDeInteracao()
+    {
+        if (Input.GetButtonDown("UsarCura") && playerHud.pocoes > 0)
+        {
+            vidaAtual += playerHud.cura;
+            playerHud.pocoes--;
+            if (vidaAtual > vidaMaxima)
+            {
+                vidaAtual = vidaMaxima;
+            }
+        }
+    }
+
     public void TakeDamage(float dano)
     {
-        vida -= dano;
-        if (vida <= 0f)
+        vidaAtual -= dano;
+        barraDeVida.SetarVida(vidaAtual);
+        if (vidaAtual <= 0f)
         {
             Destroy(this.gameObject);
         }

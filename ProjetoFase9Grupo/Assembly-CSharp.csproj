@@ -84,7 +84,9 @@
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedaCobreScript.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedaOuroScript.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedaPrataScript.cs" />
+    <Compile Include="Assets\Scripts\ObjetosEItensScripts\Poções\UsaPocao.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\AssassinoScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\BarraDeVida.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\CavaleiroScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\MagoScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PaladinoScript.cs" />
