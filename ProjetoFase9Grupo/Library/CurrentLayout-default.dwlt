@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 43
+  controlID: 63
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 44
+  controlID: 64
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 45
+  controlID: 65
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 46
+  controlID: 66
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -418,23 +418,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 1498ffff669effff
+      m_SelectedIDs: f4360000
+      m_LastClickedID: 14068
+      m_ExpandedIDs: a4f5ffffbcf5ffff64fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Armas
+        m_OriginalName: Armas
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -2628
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -480,9 +480,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.8265848, y: -8.776867, z: 35.66121}
+    m_Target: {x: -0.078341395, y: -0.42268246, z: 5.329684}
     speed: 2
-    m_Value: {x: -0.8265848, y: -8.776867, z: 35.66121}
+    m_Value: {x: -0.07834139, y: -0.42268246, z: 5.329684}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -528,13 +528,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.14388528, y: -0.0049078926, z: -0.00076770695, w: 0.99008}
+    m_Target: {x: 0.21967663, y: 0.08279719, z: -0.020112656, w: 0.9723512}
     speed: 2
-    m_Value: {x: 0.14381538, y: -0.006389857, z: -0.00055160635, w: 0.98958373}
+    m_Value: {x: 0.21959849, y: 0.08129856, z: -0.019773388, w: 0.97199595}
   m_Size:
-    m_Target: 23.162146
+    m_Target: 5.07562
     speed: 2
-    m_Value: 24.253555
+    m_Value: 5.3756204
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -696,20 +696,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Personagens
+    - Assets/Personagens/PersonagensTestes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Personagens
+  - Assets/Personagens/PersonagensTestes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\pasta_blender\Projeto Fase 9\ProjetoFase9Grupo\ProjetoFase9Grupo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 04690000
-    m_LastClickedID: 26884
-    m_ExpandedIDs: 00000000c2680000c4680000c6680000c8680000ca680000cc680000ce680000d0680000d2680000d4680000d6680000d8680000da680000046900000e69000000ca9a3b
+    m_SelectedIDs: f0390000
+    m_LastClickedID: 14832
+    m_ExpandedIDs: 000000009c3900009e390000a0390000a2390000a4390000a6390000a8390000aa390000ac390000ae390000b0390000b2390000b4390000e6390000f039000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -737,7 +737,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c2680000c4680000c6680000c8680000ca680000cc680000ce680000d0680000d2680000d4680000d6680000d8680000da680000
+    m_ExpandedIDs: 000000009c3900009e390000a0390000a2390000a4390000a6390000a8390000aa390000ac390000ae390000b0390000b2390000b4390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
