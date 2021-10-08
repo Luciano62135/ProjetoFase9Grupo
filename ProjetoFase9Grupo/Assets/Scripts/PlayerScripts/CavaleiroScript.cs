@@ -2,30 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CavaleiroScript : MonoBehaviour
+public class CavaleiroScript : PlayersManager
 {
     public Animator anim;
-
-    public float velocidadeDeMovimento;
-
-    private Rigidbody rig;
-
-    private Vector3 BotaoDeMovimento;
-    private Vector3 moveVelocity;
-
-    private Camera camera;
-
-    public float vidaAtual;
-    public float vidaMaxima = 100;
-
-    public bool estaAtacando = false;
-
     private PlayerHud playerHud;
-
-    public BarraDeVida barraDeVida;
-
-    //[SerializeField]
-    //private PhotonView pv;
+    private Rigidbody rig;
+    private Camera camera;
     void Start()
     {
         vidaAtual = vidaMaxima;
@@ -131,13 +113,4 @@ public class CavaleiroScript : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float dano)
-    {
-        vidaAtual -= dano;
-        barraDeVida.SetarVida(vidaAtual);
-        if (vidaAtual <= 0f)
-        {
-            Destroy(this.gameObject);
-        }
-    }
 }

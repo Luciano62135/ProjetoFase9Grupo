@@ -2,30 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagoScript : MonoBehaviour
+public class MagoScript : PlayersManager
 {
     public Animator anim;
-
-    public float velocidadeDeMovimento;
-
+    private PlayerHud playerHud;
     private Rigidbody rig;
-
-    private Vector3 BotaoDeMovimento;
-    private Vector3 moveVelocity;
-
     private Camera camera;
 
-    public float vidaAtual;
-    public float vidaMaxima = 100;
-
-    public bool estaAtacando = false;
-
-    private PlayerHud playerHud;
-
-    public BarraDeVida barraDeVida;
-
-    //[SerializeField]
-    //private PhotonView pv;
     void Start()
     {
         vidaAtual = vidaMaxima;
@@ -128,16 +111,6 @@ public class MagoScript : MonoBehaviour
                 playerHud.pocoes--;
                 vidaAtual = vidaMaxima;
             }
-        }
-    }
-
-    public void TakeDamage(float dano)
-    {
-        vidaAtual -= dano;
-        barraDeVida.SetarVida(vidaAtual);
-        if (vidaAtual <= 0f)
-        {
-            Destroy(this.gameObject);
         }
     }
 }
