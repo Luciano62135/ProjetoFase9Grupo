@@ -3,8 +3,11 @@
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <CscToolPath>C:\Users\arthur\Desktop\2019.4.19f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
     <CscToolExe>unity_csc.bat</CscToolExe>
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   </PropertyGroup>
@@ -62,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       <HintPath>C:\Users\arthur\Desktop\2019.4.19f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -650,6 +654,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+=======
+      <HintPath>E:\unity2019.4.19f1\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>E:\unity2019.4.19f1\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+>>>>>>> Stashed changes
     <Compile Include="Assets\Photon\PhotonRealtime\Code\AppSettings.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Code\ConnectionHandler.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Code\CustomTypesUnity.cs" />
@@ -1226,6 +1239,9 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>E:/RepositoriosGitHub/ProjetoFase9Grupo/ProjetoFase9Grupo/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup></ItemGroup>
