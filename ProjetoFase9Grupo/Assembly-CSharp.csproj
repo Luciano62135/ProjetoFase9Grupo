@@ -83,9 +83,7 @@
     <Compile Include="Assets\Scripts\HudScripts\PlayerHud.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\InimigoEsqueleto.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\Buttons.cs" />
-    <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedaCobreScript.cs" />
-    <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedaOuroScript.cs" />
-    <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedaPrataScript.cs" />
+    <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedasGeral.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Poções\UsaPocao.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\AssassinoScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\BarraDeVida.cs" />
