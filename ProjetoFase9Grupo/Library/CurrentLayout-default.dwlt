@@ -53,6 +53,9 @@ MonoBehaviour:
     height: 997
   m_MinSize: {x: 875, y: 542}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -429,9 +432,15 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: c2efffff
+=======
+      m_SelectedIDs: e0360000
+      m_LastClickedID: 14048
+      m_ExpandedIDs: 84faffffa0faffffa6faffffacfaffffbcfaffffc2faffffc6faffffccfaffffcefafffff0faffff0cfbffff26fbffff64fbffffe0360000
+>>>>>>> Stashed changes
 =======
       m_SelectedIDs: e0360000
       m_LastClickedID: 14048
@@ -503,9 +512,15 @@ MonoBehaviour:
   m_Position:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Target: {x: 5.94225, y: 0.86663055, z: -9.457726}
     speed: 2
     m_Value: {x: 5.94225, y: 0.86663055, z: -9.457726}
+=======
+    m_Target: {x: -7.6284733, y: -2.6210027, z: -13.28443}
+    speed: 2
+    m_Value: {x: -7.6284733, y: -2.6210027, z: -13.28443}
+>>>>>>> Stashed changes
 =======
     m_Target: {x: -7.6284733, y: -2.6210027, z: -13.28443}
     speed: 2
@@ -563,6 +578,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.03716151, y: -0.92937005, z: 0.09359219, w: 0.35670435}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     speed: 2
 <<<<<<< Updated upstream
     m_Value: {x: 0.004815677, y: 0.9891806, z: -0.14381346, w: 0.043534786}
@@ -582,6 +598,14 @@ MonoBehaviour:
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+    speed: 2
+    m_Value: {x: 0.037140954, y: -0.92885596, z: 0.093540415, w: 0.35650703}
+  m_Size:
+    m_Target: 10
+    speed: 2
+    m_Value: 10
 >>>>>>> Stashed changes
   m_Ortho:
     m_Target: 0
@@ -769,6 +793,7 @@ MonoBehaviour:
   m_LastFoldersGridSize: -1
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LastProjectPath: C:\Users\arthur\Documents\GitHub\ProjetoFase9Grupo\ProjetoFase9Grupo
   m_LockTracker:
     m_IsLocked: 0
@@ -780,6 +805,8 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   m_LastProjectPath: E:\RepositoriosGitHub\ProjetoFase9Grupo\ProjetoFase9Grupo
   m_LockTracker:
     m_IsLocked: 0
@@ -789,6 +816,9 @@ MonoBehaviour:
     m_LastClickedID: 15590
     m_ExpandedIDs: 00000000a4390000a6390000a8390000aa390000ac390000ae390000b0390000b2390000b4390000b6390000b8390000ba390000bc390000ee390000003c0000043c000000ca9a3b
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -821,7 +851,11 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_ExpandedIDs: 00000000f63a0000f83a0000fa3a0000fc3a0000fe3a0000003b0000023b0000043b0000063b0000083b00000a3b00000c3b00000e3b0000
+=======
+    m_ExpandedIDs: 00000000a4390000a6390000a8390000aa390000ac390000ae390000b0390000b2390000b4390000b6390000b8390000ba390000bc390000
+>>>>>>> Stashed changes
 =======
     m_ExpandedIDs: 00000000a4390000a6390000a8390000aa390000ac390000ae390000b0390000b2390000b4390000b6390000b8390000ba390000bc390000
 >>>>>>> Stashed changes
