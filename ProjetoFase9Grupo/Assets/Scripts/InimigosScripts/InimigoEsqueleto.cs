@@ -19,6 +19,7 @@ public class InimigoEsqueleto : MonoBehaviour
     //estados (no caso oque vai ativar os estados)
     public float alcanceDeVisao, AlcanceDoAtaque;
     public bool jogadorNaAreaDeVisao, jogadorNaAreaDeAtaque;
+    public bool estaAtacando = false;
 
     //teste para pegar a posicao do player
     public Vector3 posicaoPlayer;
@@ -32,42 +33,46 @@ public class InimigoEsqueleto : MonoBehaviour
     {
         posicaoPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
 
-        //verifique a visão e o alcance de ataque
-        jogadorNaAreaDeVisao = Physics.CheckSphere(transform.position, alcanceDeVisao, OqueEPlayer);
-        jogadorNaAreaDeAtaque = Physics.CheckSphere(transform.position, AlcanceDoAtaque, OqueEPlayer);
+        float distance = Vector3.Distance(posicaoPlayer, transform.position);
 
-        if (jogadorNaAreaDeVisao && !jogadorNaAreaDeAtaque)
+        if (distance <= alcanceDeVisao && estaAtacando == false)
         {
-            ChasePlayer();
+            agent.SetDestination(posicaoPlayer);
+            agent.stoppingDistance = 2;
             esqueletoAnim.SetBool("Andando", true);
+            
+            if (distance <= agent.stoppingDistance)
+            {
+                FaceTarget();
+                esqueletoAnim.SetBool("Andando", false);
+                esqueletoAnim.SetBool("Atacando", true);
+                agent.isStopped = true;
+                Invoke(nameof(tempoEntreOAtaque), 5);
+            }
+            else
+            {
+                esqueletoAnim.SetBool("Atacando", false);
+            }
         }
         else
         {
             esqueletoAnim.SetBool("Andando", false);
         }
-        if (jogadorNaAreaDeAtaque && jogadorNaAreaDeVisao)
-        {
-            AtaqueOPlayer();
-            esqueletoAnim.SetBool("Atacando", true);
-            esqueletoAnim.SetBool("Andando", false);
-        }
-        else
-        {
-            esqueletoAnim.SetBool("Atacando", false);
-        }
-
     }
 
-    public void ChasePlayer()
+    public void TempoEntreOAtaque()
     {
-        agent.SetDestination(posicaoPlayer);
-
+        estaAtacando = false;
+        agent.isStopped = false;
     }
 
-    public void AtaqueOPlayer()
+    void FaceTarget ()
     {
-
+        Vector3 direction = (posicaoPlayer - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
+
 
     private void OnDrawGizmosSelected()
     {
