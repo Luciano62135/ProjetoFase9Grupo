@@ -80,6 +80,7 @@
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Scripts\ArmasInimigos\ArmasInimigosScript.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\Movimentação.cs" />
+    <Compile Include="Assets\Scripts\HudScripts\InimigoBarraDeVida.cs" />
     <Compile Include="Assets\Scripts\HudScripts\PlayerHud.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\InimigoEsqueleto.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\Buttons.cs" />
