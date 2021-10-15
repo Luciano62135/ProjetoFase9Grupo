@@ -3,35 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class InimigoEsqueleto : MonoBehaviour
+public class InimigoEsqueleto : ScriptInimigoPai
 {
-    //Componentes
-    public Animator esqueletoAnim;
-    public NavMeshAgent agent;
-
-    //Layers
-    public LayerMask OqueEChao, OqueEPlayer;
-
-    //ataque
-    public float tempoEntreOAtaque;
     public bool estaAtacando = false;
-    public int numeroDoAtaque;
-
-    //estados (no caso oque vai ativar os estados)
-    public float alcanceDeVisao, AlcanceDoAtaque;
-
-    //teste para pegar a posicao do player
-    public Vector3 posicaoPlayer;
-
-    // vida
-    public float vidaAtual;
-    public float vidaMaxima = 100;
-    public BarraDeVida barraDeVida;
-
     public void Start()
     {
-        vidaAtual = vidaMaxima;
-        barraDeVida.SetarVidaMaxima(vidaMaxima);
         esqueletoAnim = GetComponent<Animator>();
     }
 
@@ -55,6 +31,7 @@ public class InimigoEsqueleto : MonoBehaviour
                 {
                     esqueletoAnim.SetBool("Andando", false);
                     esqueletoAnim.SetBool("Atacando", true);
+                    estaAtacando = true;
                     agent.isStopped = true;
                     Invoke(nameof(TempoEntreOAtaque), tempoEntreOAtaque);
                 }
@@ -63,6 +40,7 @@ public class InimigoEsqueleto : MonoBehaviour
                     esqueletoAnim.SetBool("Andando", false);
                     esqueletoAnim.SetBool("Atacando2", true);
                     agent.isStopped = true;
+                    estaAtacando = true;
                     Invoke(nameof(TempoEntreOAtaque), tempoEntreOAtaque);
                 }
             }
@@ -99,16 +77,4 @@ public class InimigoEsqueleto : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, alcanceDeVisao);
 
     }
-
-    public void TakeDamage(float dano)
-    {
-        vidaAtual -= dano;
-        barraDeVida.SetarVida(vidaAtual);
-        if (vidaAtual <= 0f)
-        {
-            Destroy(this.gameObject);
-        }
-    }
-
-
 }

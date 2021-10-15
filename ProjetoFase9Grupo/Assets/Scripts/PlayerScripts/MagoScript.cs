@@ -11,9 +11,6 @@ public class MagoScript : PlayersManager
 
     void Start()
     {
-        vidaAtual = vidaMaxima;
-        barraDeVida.SetarVidaMaxima(vidaMaxima);
-
         playerHud = GameObject.Find("Canvas").GetComponent<PlayerHud>();
         // pv = GetComponent<PhotonView>();
         rig = GetComponent<Rigidbody>();
@@ -90,7 +87,8 @@ public class MagoScript : PlayersManager
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            anim.SetBool("AtacandoNormal", true);
+            anim.SetBool("FeiticoNormal", true);
+            estaAtacando = true;
         }
         else
         {

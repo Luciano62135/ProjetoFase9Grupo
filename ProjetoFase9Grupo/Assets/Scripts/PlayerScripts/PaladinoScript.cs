@@ -6,15 +6,14 @@ using Photon.Realtime;
 
 public class PaladinoScript : PlayersManager
 {
+    ArmasPlayersScript arma;
     public Animator anim;
     private PlayerHud playerHud;
     private Rigidbody rig;
     private Camera camera;
     void Start()
     {
-        vidaAtual = vidaMaxima;
-        barraDeVida.SetarVidaMaxima(vidaMaxima);
-
+        arma = GetComponent<ArmasPlayersScript>();
         playerHud = GameObject.Find("Canvas").GetComponent<PlayerHud>();
         // pv = GetComponent<PhotonView>();
         rig = GetComponent<Rigidbody>();
@@ -92,6 +91,7 @@ public class PaladinoScript : PlayersManager
         if (Input.GetKey(KeyCode.Mouse0))
         {
             anim.SetBool("AtaqueNormal", true);
+            arma.estaAtacando = true;
         }
         else
         {

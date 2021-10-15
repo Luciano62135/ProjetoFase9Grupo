@@ -10,9 +10,6 @@ public class CavaleiroScript : PlayersManager
     private Camera camera;
     void Start()
     {
-        vidaAtual = vidaMaxima;
-        barraDeVida.SetarVidaMaxima(vidaMaxima);
-
         playerHud = GameObject.Find("Canvas").GetComponent<PlayerHud>();
         // pv = GetComponent<PhotonView>();
         rig = GetComponent<Rigidbody>();
@@ -90,6 +87,7 @@ public class CavaleiroScript : PlayersManager
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             anim.SetBool("AtacandoNormal", true);
+            estaAtacando = true;
         }
         else
         {
@@ -112,5 +110,4 @@ public class CavaleiroScript : PlayersManager
             }
         }
     }
-
 }
