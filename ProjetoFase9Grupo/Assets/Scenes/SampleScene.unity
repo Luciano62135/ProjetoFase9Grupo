@@ -1236,7 +1236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3edb308cc333b245a4d116d9296036c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  estaAtacando: 0
+  estaAtacando: 1
   dano: 10
 --- !u!23 &1588767661
 MeshRenderer:
@@ -1855,7 +1855,7 @@ PrefabInstance:
     - target: {fileID: 599029739125697384, guid: 7fcf9d363be1fa847ba8185665e31618,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.11
+      value: 1.87
       objectReference: {fileID: 0}
     - target: {fileID: 599029739125697384, guid: 7fcf9d363be1fa847ba8185665e31618,
         type: 3}
@@ -1972,6 +1972,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 7.97
       objectReference: {fileID: 0}
+    - target: {fileID: 1142391630215579546, guid: 7fcf9d363be1fa847ba8185665e31618,
+        type: 3}
+      propertyPath: m_Name
+      value: CanvasInimigo
+      objectReference: {fileID: 0}
     - target: {fileID: 1142391630995441174, guid: 7fcf9d363be1fa847ba8185665e31618,
         type: 3}
       propertyPath: cam
@@ -2021,6 +2026,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688200930332249274, guid: 7fcf9d363be1fa847ba8185665e31618,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -61.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fcf9d363be1fa847ba8185665e31618, type: 3}

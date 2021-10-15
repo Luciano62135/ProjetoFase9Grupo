@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class ArmasInimigosScript : MonoBehaviour
 {
+    InimigoEsqueleto esqueleto;
     public bool estaAtacando = false;
     public float dano;
     // Start is called before the first frame update
     void Start()
     {
-        
+        esqueleto = GetComponent<InimigoEsqueleto>();
     }
 
     // Update is called once per frame
@@ -21,7 +22,6 @@ public class ArmasInimigosScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         VidaPlayer vidaPlayer = GetComponent<VidaPlayer>();
-        InimigoEsqueleto esqueleto = GetComponent<InimigoEsqueleto>();
 
         if (other.tag == "Player" && esqueleto.estaAtacando == true)
         {

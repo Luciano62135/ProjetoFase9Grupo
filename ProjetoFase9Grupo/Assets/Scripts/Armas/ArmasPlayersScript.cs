@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class ArmasPlayersScript : MonoBehaviour
 {
+    PlayersManager players;
     public bool estaAtacando = false;
     public float dano;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        players = GetComponent<PlayersManager>();
     }
 
     // Update is called once per frame
@@ -21,7 +22,6 @@ public class ArmasPlayersScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayersManager players = GetComponent<PlayersManager>();
         InimigoEsqueleto esqueleto = transform.GetComponent<InimigoEsqueleto>();
         VidaInimigoScript vidainimigo = GetComponent<VidaInimigoScript>();
 
