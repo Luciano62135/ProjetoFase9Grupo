@@ -88,11 +88,17 @@ public class CavaleiroScript : PlayersManager
         {
             anim.SetBool("AtacandoNormal", true);
             estaAtacando = true;
+            Invoke(nameof(TempoEntreOAtaque), 1);
         }
         else
         {
             anim.SetBool("AtacandoNormal", false);
         }
+    }
+
+    public void TempoEntreOAtaque()
+    {
+        estaAtacando = false;
     }
 
     /*Esses botões de interação sera usado para fazer o player usar itens consumiveis como a poção de vida, os outros tipos de interaçao
