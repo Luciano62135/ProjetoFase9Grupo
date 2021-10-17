@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(InimigoEsqueleto))]
 public class ArmasInimigosScript : MonoBehaviour
 {
     InimigoEsqueleto esqueleto;

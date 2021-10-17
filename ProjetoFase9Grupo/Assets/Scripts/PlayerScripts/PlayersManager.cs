@@ -20,4 +20,29 @@ public class PlayersManager : MonoBehaviour
         
     }
 
+    public void Update()
+    {
+		/*if (waitTime > 10 && hold == true)
+		{
+			if (foots > 10 && foots < 15)
+			{
+				if (Input.GetButton("Walk") == false)
+					Instantiate(rightFoot, transform.position, transform.rotation);
+
+				foots += 1 * RealSpeed;
+			}
+			else if (foots > 20)
+			{
+				if (Input.GetButton("Walk") == false)
+					Instantiate(rightFoot, transform.position, transform.rotation);
+				foots = 0;
+			}
+			else
+			{
+				foots += 1 * RealSpeed;
+			}
+			waitTime = 0;
+		}*/
+	}
+
 }
