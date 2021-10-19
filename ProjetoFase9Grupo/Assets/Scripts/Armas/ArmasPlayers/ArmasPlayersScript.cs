@@ -5,7 +5,6 @@ using UnityEngine;
 public class ArmasPlayersScript : MonoBehaviour
 {
     CavaleiroScript players;
-    public bool estaAtacando = false;
     public float dano;
 
     // Start is called before the first frame update

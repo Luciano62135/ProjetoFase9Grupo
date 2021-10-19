@@ -6,7 +6,6 @@ using UnityEngine;
 public class ArmasInimigosScript : MonoBehaviour
 {
     InimigoEsqueleto esqueleto;
-    public bool estaAtacando = false;
     public float dano;
     // Start is called before the first frame update
     void Start()

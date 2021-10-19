@@ -91,7 +91,7 @@ public class PaladinoScript : PlayersManager
         if (Input.GetKey(KeyCode.Mouse0))
         {
             anim.SetBool("AtaqueNormal", true);
-            arma.estaAtacando = true;
+            estaAtacando = true;
         }
         else
         {
@@ -114,6 +114,8 @@ public class PaladinoScript : PlayersManager
             transform.Translate(new Vector3(3 * Time.deltaTime, 0, 0));
         }
     }
+
+
 
     /*Esses botões de interação sera usado para fazer o player usar itens consumiveis como a poção de vida, os outros tipos de interaçao
      * como abrir portas ou pegar itens vai ficar em scripts separados.
