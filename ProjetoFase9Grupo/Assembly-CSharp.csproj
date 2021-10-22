@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\InimigosScripts\ScriptInimigoPai.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\VidaInimigoScript.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\Buttons.cs" />
+    <Compile Include="Assets\Scripts\MultiplayerScripts\Conectar.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedasGeral.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Poções\UsaPocao.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\AssassinoScript.cs" />
@@ -96,7 +97,6 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PaladinoScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayersManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\VidaPlayer.cs" />
-    <Compile Include="Assets\Scripts\Testes\EntrandoOnline.cs" />
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />

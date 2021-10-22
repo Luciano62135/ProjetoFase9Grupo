@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject painelLogin, menu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +18,12 @@ public class Buttons : MonoBehaviour
     void Update()
     {
         
+    }
+    
+    public void MultiplayerButton()
+    {
+        painelLogin.SetActive(true);
+        menu.SetActive(false);
     }
 
     public void PlayButton()
@@ -35,5 +44,6 @@ public class Buttons : MonoBehaviour
     public void QuitButton()
     {
         Application.Quit();
+        
     }
 }
