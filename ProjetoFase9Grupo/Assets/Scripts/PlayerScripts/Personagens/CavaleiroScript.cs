@@ -86,6 +86,8 @@ public class CavaleiroScript : PlayersManager
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            //som de ataque//
+            FindObjectOfType<Audio__Manager>().Play("Ataque");
             anim.SetBool("AtacandoNormal", true);
             estaAtacando = true;
             Invoke(nameof(TempoEntreOAtaque), 1);

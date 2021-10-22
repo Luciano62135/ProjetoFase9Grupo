@@ -64,7 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Audio_Manager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
@@ -99,7 +98,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\Personagens\PaladinoScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Personagens\PlayersManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\VidaPlayer.cs" />
-    <Compile Include="Assets\Sons\AudioManager.cs" />
+    <Compile Include="Assets\Sons\Audio__Manager.cs" />
     <Compile Include="Assets\Sons\Sound.cs" />
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
