@@ -31,13 +31,18 @@ public class Conectar : MonoBehaviourPunCallbacks
     public void CriarSala()
     {
         PhotonNetwork.CreateRoom(nomeSala.text, new RoomOptions(), TypedLobby.Default);
+        Invoke(nameof(TempoParaEntrarSala), 3);
+    }
+
+    public void TempoParaEntrarSala()
+    {
         PhotonNetwork.LoadLevel("SampleScene");
     }
 
     public void EntrarSala()
     {
         PhotonNetwork.JoinRoom(nomeSala.text);
-        PhotonNetwork.LoadLevel("SampleScene");
+        Invoke(nameof(TempoParaEntrarSala), 3);
     }
 
     public void EntrarEmSalaAleatoria()

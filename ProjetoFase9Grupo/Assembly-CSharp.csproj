@@ -92,11 +92,12 @@
     <Compile Include="Assets\Scripts\MultiplayerScripts\Conectar.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedasGeral.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Poções\UsaPocao.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\AssassinoScript.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\CavaleiroScript.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\MagoScript.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\PaladinoScript.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\PlayersManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\EscolhaDePersonagens.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Personagens\CavaleiroScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Personagens\MachadoScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Personagens\MagoScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Personagens\PaladinoScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Personagens\PlayersManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\VidaPlayer.cs" />
     <Compile Include="Assets\Sons\AudioManager.cs" />
     <Compile Include="Assets\Sons\Sound.cs" />
