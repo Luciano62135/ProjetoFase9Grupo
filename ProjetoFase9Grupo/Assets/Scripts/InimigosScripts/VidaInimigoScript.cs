@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class VidaInimigoScript : MonoBehaviour
 {
+    public float vidaAtual;
+    public float vidaMaxima = 100;
+    public BarraDeVida barraDeVida;
+
     // Start is called before the first frame update
     void Start()
     {
-        ScriptInimigoPai inimigoPai = GetComponent<ScriptInimigoPai>();
-        inimigoPai.vidaAtual = inimigoPai.vidaMaxima;
-        inimigoPai.barraDeVida.SetarVidaMaxima(inimigoPai.vidaMaxima);
+        vidaAtual = vidaMaxima;
+        barraDeVida.SetarVidaMaxima(vidaMaxima);
     }
 
     // Update is called once per frame
@@ -20,10 +23,9 @@ public class VidaInimigoScript : MonoBehaviour
 
     public void TakeDamage(float dano)
     {
-        ScriptInimigoPai inimigoPai = GetComponent<ScriptInimigoPai>();
-        inimigoPai.vidaAtual -= dano;
-        inimigoPai.barraDeVida.SetarVida(inimigoPai.vidaAtual);
-        if (inimigoPai.vidaAtual <= 0f)
+        vidaAtual -= dano;
+        barraDeVida.SetarVida(vidaAtual);
+        if (vidaAtual <= 0f)
         {
             Destroy(this.gameObject);
         }

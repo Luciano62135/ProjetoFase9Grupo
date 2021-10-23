@@ -22,8 +22,4 @@ public class ScriptInimigoPai : MonoBehaviour
     //teste para pegar a posicao do player
     public Vector3 posicaoPlayer;
 
-    // vida
-    public float vidaAtual;
-    public float vidaMaxima = 100;
-    public BarraDeVida barraDeVida;
 }

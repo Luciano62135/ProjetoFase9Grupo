@@ -428,7 +428,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 84d056f91d32c7d4d883e2b22391c6bd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 84d056f91d32c7d4d883e2b22391c6bd,
         type: 3}
@@ -735,14 +735,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 396286162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df43a6788e49d84eaa5eefcd4b3468f, type: 3}
+  m_Script: {fileID: 11500000, guid: b408ad0610db58d4c996c48890077aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   estaAtacando: 0
   vidaAtual: 0
   vidaMaxima: 100
-  barraDeVida: {fileID: 1652889323}
-  anim: {fileID: 396286166}
+  barraDeVida: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!136 &396286164
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -783,7 +783,7 @@ Animator:
   m_GameObject: {fileID: 396286162}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 84d056f91d32c7d4d883e2b22391c6bd, type: 3}
-  m_Controller: {fileID: 9100000, guid: d7ffaa482b2458845b303ac6934ffabf, type: 2}
+  m_Controller: {fileID: 9100000, guid: 577b950ba75681047a35dac62e3f9a8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1103,6 +1103,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1142391630236671055}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &562644420 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1142391630995441177, guid: 7fcf9d363be1fa847ba8185665e31618,
+    type: 3}
+  m_PrefabInstance: {fileID: 1142391630236671055}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02057b2671c45254285d80e9252c1f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &569087289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,6 +1969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7aaa38b6f9c2a4aa00bae9cc91f7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaAtual: 0
+  vidaMaxima: 100
+  barraDeVida: {fileID: 562644420}
 --- !u!1 &1252547971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1142391630215579546, guid: 7fcf9d363be1fa847ba8185665e31618,
@@ -3586,6 +3601,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1142391631077837982, guid: 7fcf9d363be1fa847ba8185665e31618,
         type: 3}
+      propertyPath: m_Height
+      value: 7.6085997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142391631077837982, guid: 7fcf9d363be1fa847ba8185665e31618,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.9620726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142391631077837982, guid: 7fcf9d363be1fa847ba8185665e31618,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.087865114
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142391631077837982, guid: 7fcf9d363be1fa847ba8185665e31618,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 3.3042998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142391631077837982, guid: 7fcf9d363be1fa847ba8185665e31618,
+        type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -3865,8 +3900,8 @@ GameObject:
   - component: {fileID: 7087782471583623926}
   - component: {fileID: 2358729064016975100}
   - component: {fileID: 5298996996256450163}
-  - component: {fileID: 7264861913687027148}
   - component: {fileID: 7264861913687027149}
+  - component: {fileID: 7264861913687027148}
   m_Layer: 0
   m_Name: Espada
   m_TagString: Untagged
@@ -3883,7 +3918,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7264861913687027147}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc9f682b734f3ee4cac86d76c1d449bc, type: 3}
+  m_Script: {fileID: 11500000, guid: bb3b7b416dc2ada4e82d75c6b6da1648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 0

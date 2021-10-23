@@ -6,14 +6,12 @@ using Photon.Realtime;
 
 public class PaladinoScript : PlayersManager
 {
-    ArmasPlayersScript arma;
     public Animator anim;
     private PlayerHud playerHud;
     private Rigidbody rig;
     private Camera camera;
     void Start()
     {
-        arma = GetComponent<ArmasPlayersScript>();
         playerHud = GameObject.Find("Canvas").GetComponent<PlayerHud>();
         // pv = GetComponent<PhotonView>();
         rig = GetComponent<Rigidbody>();
