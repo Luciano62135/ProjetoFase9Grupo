@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\Personagens\PaladinoScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Personagens\PlayersManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\VidaPlayer.cs" />
+    <Compile Include="Assets\Scripts\Timer\Timer.cs" />
     <Compile Include="Assets\Sons\Audio__Manager.cs" />
     <Compile Include="Assets\Sons\Sound.cs" />
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />

@@ -1972,6 +1972,11 @@ MonoBehaviour:
   vidaAtual: 0
   vidaMaxima: 100
   barraDeVida: {fileID: 562644420}
+  moedaPrata: {fileID: 8578217084951284187, guid: 9d3fc2df97daa5942b494ba00df1a041,
+    type: 3}
+  moedaCobre: {fileID: 522440173333394771, guid: 76c469d47b68f6c42975649c74bba02f,
+    type: 3}
+  chanceDaMoeda: 0
 --- !u!1 &1252547971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1142391630215579546, guid: 7fcf9d363be1fa847ba8185665e31618,
@@ -2246,6 +2251,7 @@ GameObject:
   - component: {fileID: 1482794444}
   - component: {fileID: 1482794443}
   - component: {fileID: 1482794442}
+  - component: {fileID: 1482794445}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2301,6 +2307,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1482794445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482794441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050f0ce8b137bcc4cb740546e1f8516a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempo: 0
+  estaJogando: 1
 --- !u!1 &1492455708
 GameObject:
   m_ObjectHideFlags: 0
