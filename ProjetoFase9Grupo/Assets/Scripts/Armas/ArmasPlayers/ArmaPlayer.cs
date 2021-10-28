@@ -26,6 +26,7 @@ public class ArmaPlayer : MonoBehaviour
 
         if (other.tag == "Inimigo" && cavaleiro.estaAtacando == true)
         {
+            FindObjectOfType<Audio__Manager>().Play("AtaqueNoEsqueleto");
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
         }
     }
