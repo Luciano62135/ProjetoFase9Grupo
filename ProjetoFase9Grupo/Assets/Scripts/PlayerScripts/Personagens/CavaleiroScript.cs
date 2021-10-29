@@ -111,10 +111,11 @@ public class CavaleiroScript : PlayersManager
         if (Input.GetButtonDown("UsarCura") && playerHud.pocoes > 0)
         {
             playerHud.pocoes--;
-            vidaAtual += playerHud.cura;
-            if (vidaAtual > vidaMaxima)
+            VidaPlayer vida = GameObject.FindGameObjectWithTag("Player").GetComponent<VidaPlayer>();
+            vida.vidaAtual += playerHud.cura;
+            if (vida.vidaAtual > vida.vidaMaxima)
             {
-                vidaAtual = vidaMaxima;
+                vida.vidaAtual = vida.vidaMaxima;
             }
         }
     }

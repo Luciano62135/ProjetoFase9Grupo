@@ -24,4 +24,9 @@ public class BarraDeVida : MonoBehaviour
 
         preenchimentoVida.color = gradient.Evaluate(slider.normalizedValue);
     }
+
+    public void Update()
+    {
+        
+    }
 }
