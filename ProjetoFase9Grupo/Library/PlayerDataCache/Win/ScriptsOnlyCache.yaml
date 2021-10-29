@@ -1,18 +1,20 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ArmaPlayer
     - ArmasInimigosScript
-    - ArmasPlayersScript
+    - Audio__Manager
     - BarraDeVida
     - Buttons
+    - CavaleiroScript
     - Conectar
     - EscolhaDePersonagens
     - InimigoBarraDeVida
     - InimigoEsqueleto
-    - MachadoScript
     - MoedasGeral
     - "Movimenta\xE7\xE3o"
     - PlayerHud
+    - Timer
     - VidaInimigoScript
     - VidaPlayer
     PhotonUnityNetworking.Demos.dll:
@@ -25,6 +27,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -33,14 +37,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.ServerSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -85,7 +81,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11528}
     - Class: 114
-      Script: {instanceID: 12008}
+      Script: {instanceID: 12006}
     - Class: 114
       Script: {instanceID: 12208}
     - Class: 114
@@ -156,13 +152,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11274}
     - Class: 114
-      Script: {instanceID: 11422}
+      Script: {instanceID: 11420}
     - Class: 114
       Script: {instanceID: 11442}
     - Class: 114
       Script: {instanceID: 11528}
     - Class: 114
-      Script: {instanceID: 12008}
+      Script: {instanceID: 12006}
     - Class: 114
       Script: {instanceID: 12082}
     - Class: 114
@@ -172,15 +168,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12364}
     - Class: 114
-      Script: {instanceID: 12558}
+      Script: {instanceID: 12560}
     - Class: 114
-      Script: {instanceID: 12634}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12720}
     - Class: 114
-      Script: {instanceID: 12726}
+      Script: {instanceID: 12728}
     - Class: 114
-      Script: {instanceID: 12738}
+      Script: {instanceID: 12740}
     - Class: 114
       Script: {instanceID: 12940}
     - Class: 114
@@ -256,6 +252,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -279,7 +277,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11386}
     - Class: 114
-      Script: {instanceID: 11414}
+      Script: {instanceID: 11426}
     - Class: 114
       Script: {instanceID: 11520}
     - Class: 114
@@ -289,11 +287,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11802}
     - Class: 114
-      Script: {instanceID: 12008}
+      Script: {instanceID: 12006}
+    - Class: 114
+      Script: {instanceID: 12080}
+    - Class: 114
+      Script: {instanceID: 12176}
     - Class: 114
       Script: {instanceID: 12184}
-    - Class: 114
-      Script: {instanceID: 12324}
     - Class: 114
       Script: {instanceID: 12364}
     - Class: 114
@@ -301,9 +301,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12436}
     - Class: 114
-      Script: {instanceID: 12694}
+      Script: {instanceID: 12558}
     - Class: 114
-      Script: {instanceID: 12912}
+      Script: {instanceID: 12696}
     - Class: 114
       Script: {instanceID: 13092}
     - Class: 114
@@ -313,7 +313,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13566}
     - Class: 114
-      Script: {instanceID: 14918}
+      Script: {instanceID: 14446}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -461,7 +461,7 @@ ScriptsOnlyBuild:
     className: ChatGui
   - hash:
       serializedVersion: 2
-      Hash: f2968a67f1bb99d20f68922ea8afd374
+      Hash: 86fb97ca6c7dc25b82955f0e68a4f43b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EscolhaDePersonagens
@@ -489,6 +489,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
     className: PlayerAnimatorManager
+  - hash:
+      serializedVersion: 2
+      Hash: 3f647c968e2ce7f0ffe05768c27aa8d3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ArmaPlayer
   - hash:
       serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
@@ -725,7 +731,7 @@ ScriptsOnlyBuild:
     className: SendRateOnSerializeField
   - hash:
       serializedVersion: 2
-      Hash: 24341651b12c175296147d22975c42bf
+      Hash: 0ab9bb962eaed673a3801ca99916c3e1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScriptInimigoPai
@@ -783,12 +789,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
     className: PhotonRigidbody2DView
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AudioManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -885,6 +885,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 66056c2209ff8e6b238f8b056c7eb331
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Audio__Manager
   - hash:
       serializedVersion: 2
       Hash: f8f5c34557f4103b6547d8f956cec6ea
@@ -1097,7 +1103,7 @@ ScriptsOnlyBuild:
     className: OnClickDestroy
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: d41fe5dec4759a529effbdc27d2ad779
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VidaInimigoScript
@@ -1137,6 +1143,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: IsConnectedProperty
+  - hash:
+      serializedVersion: 2
+      Hash: b545286eaa4a1208b4952594de94e050
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Timer
   - hash:
       serializedVersion: 2
       Hash: 47cb13937d80a450aefeced75a0d46a3
@@ -1329,12 +1341,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: PropertyCell
-  - hash:
-      serializedVersion: 2
-      Hash: 3f647c968e2ce7f0ffe05768c27aa8d3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ArmasPlayersScript
   - hash:
       serializedVersion: 2
       Hash: cba6cca6bb3290c4c00d709cf63843db
@@ -1721,7 +1727,7 @@ ScriptsOnlyBuild:
     className: ConnectToRegionUIForm
   - hash:
       serializedVersion: 2
-      Hash: 75bd71c82e23556f7c3329f97ed21a25
+      Hash: 94d1baf69b634ddea1d2421e0b1841ac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InimigoEsqueleto

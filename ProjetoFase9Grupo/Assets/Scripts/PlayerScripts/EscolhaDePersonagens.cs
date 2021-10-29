@@ -8,6 +8,8 @@ public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
 {
     public int numeroPersonagem = 0;
 
+    public GameObject escolhaHUD;
+
     //Personagens
     public GameObject paladino;
     public GameObject cavaleiro;
@@ -30,15 +32,19 @@ public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
                 break;
             case 1:
                 PhotonNetwork.Instantiate(paladino.name, new Vector3(0, 3, 0), Quaternion.Euler(45, 45, 45), 0);
+                escolhaHUD.SetActive(false);
                 break;
             case 2:
-                PhotonNetwork.Instantiate(cavaleiro.name, new Vector3(0, 3, 0), Quaternion.Euler(45, 45, 45), 0);
+                PhotonNetwork.Instantiate(cavaleiro.name, new Vector3(0, 10, 0), Quaternion.Euler(45, 45, 45), 0);
+                escolhaHUD.SetActive(false);
                 break;
             case 3:
                 PhotonNetwork.Instantiate(mago.name, new Vector3(0, 3, 0), Quaternion.Euler(45, 45, 45), 0);
+                escolhaHUD.SetActive(false);
                 break;
             case 4:
                 PhotonNetwork.Instantiate(machado.name, new Vector3(0, 3, 0), Quaternion.Euler(45, 45, 45), 0);
+                escolhaHUD.SetActive(false);
                 break;
         }
     }

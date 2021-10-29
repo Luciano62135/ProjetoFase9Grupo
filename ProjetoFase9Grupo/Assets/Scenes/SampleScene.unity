@@ -2219,7 +2219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1423648101
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2254,6 +2254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numeroPersonagem: 0
+  escolhaHUD: {fileID: 1423648100}
   paladino: {fileID: 415026510381804361, guid: e7b558789f11c9a4f97a6ef8a84acff5, type: 3}
   cavaleiro: {fileID: 57305329954200396, guid: 2e0b467a5d0536c44b2c68e657b013f3, type: 3}
   mago: {fileID: 2571636506553232930, guid: ffa79155a9a0cb942bd01942a3363b35, type: 3}
