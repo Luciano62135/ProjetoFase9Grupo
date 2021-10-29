@@ -26,7 +26,9 @@ public class VidaInimigoScript : MonoBehaviour
 
     public void TakeDamage(float dano)
     {
+
         vidaAtual -= dano;
+        FindObjectOfType<Audio__Manager>().Play("DanoNoEsqueleto");
         barraDeVida.SetarVida(vidaAtual);
         if (vidaAtual <= 0f)
         {

@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Passos
-    clip: {fileID: 8300000, guid: 6cb2c0ca73d1efc4f853c08a694fffbd, type: 3}
+    clip: {fileID: 8300000, guid: efa46c0a445c0a24ca1e9c35b504e4af, type: 3}
     volume: 0.465
     pitch: 1.606
     loop: 0
@@ -1175,8 +1175,8 @@ MonoBehaviour:
     pitch: 1.606
     loop: 0
     source: {fileID: 0}
-  - name: AtaqueNaParede
-    clip: {fileID: 8300000, guid: 6cb2c0ca73d1efc4f853c08a694fffbd, type: 3}
+  - name: DanoNoEsqueleto
+    clip: {fileID: 8300000, guid: efeb71624321a3a4d8e0bbd0e412960a, type: 3}
     volume: 0.465
     pitch: 1.606
     loop: 0
