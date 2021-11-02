@@ -330,6 +330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79d8f66dc7acc542bc9ba0a028b4d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painelLogin: {fileID: 0}
+  menu: {fileID: 0}
 --- !u!1 &838436950
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,9 +484,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Programador: LUCIANO                            \n\nSons: ARTUR\n\nModelador/Artista
-    T\xE9cnico: EDUARDO\n\nHUD/Menu: GABRIEL\n\nLevel Design: PATRICK\n\nGamers Designers:
-    Todo mundo"
+  m_Text: "Programador: Luciano                            \n\nSons: Artur\n\nModelador/Artista
+    T\xE9cnico: Eduardo\n\nHUD/Menu: Gabriel\n\nLevel Design: Patrick\n\nGamers Designers:
+    Todo mundo\n\nColaboradores: SuperGeeks e professor"
 --- !u!222 &877425006
 CanvasRenderer:
   m_ObjectHideFlags: 0
