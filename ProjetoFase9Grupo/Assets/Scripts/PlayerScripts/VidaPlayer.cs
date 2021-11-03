@@ -15,7 +15,7 @@ public class VidaPlayer : PlayersManager
     // Update is called once per frame
     void Update()
     {
-        
+        barraDeVida.SetarVida(vidaAtual);
     }
 
     public void TakeDamage(float dano)
