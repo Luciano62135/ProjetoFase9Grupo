@@ -8,8 +8,12 @@ public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
 {
     public int numeroPersonagem = 0;
 
-    public GameObject escolhaHUD;
+    public int depthCamera = 1;
 
+    //objetos que serão desativados ou ativados ao escolher o personagem.
+    public GameObject escolhaHUD;
+    public GameObject playerHud;
+    public Camera mainCamera;
     //Personagens
     public GameObject paladino;
     public GameObject cavaleiro;
@@ -32,19 +36,31 @@ public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
                 break;
             case 1:
                 PhotonNetwork.Instantiate(paladino.name, new Vector3(0, 3, 0), Quaternion.Euler(45, 45, 45), 0);
+                playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
+                depthCamera = -1;
+                mainCamera.depth.Equals(depthCamera);
                 break;
             case 2:
                 PhotonNetwork.Instantiate(cavaleiro.name, new Vector3(0, 10, 0), Quaternion.Euler(45, 45, 45), 0);
+                playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
+                depthCamera = -1;
+                mainCamera.depth.Equals(depthCamera);
                 break;
             case 3:
                 PhotonNetwork.Instantiate(mago.name, new Vector3(0, 3, 0), Quaternion.Euler(45, 45, 45), 0);
+                playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
+                depthCamera = -1;
+                mainCamera.depth.Equals(depthCamera);
                 break;
             case 4:
                 PhotonNetwork.Instantiate(machado.name, new Vector3(0, 3, 0), Quaternion.Euler(45, 45, 45), 0);
+                playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
+                depthCamera = -1;
+                mainCamera.depth.Equals(depthCamera);
                 break;
         }
     }
