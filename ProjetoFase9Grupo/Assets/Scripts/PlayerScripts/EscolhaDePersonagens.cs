@@ -35,32 +35,28 @@ public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
                 Comecar();
                 break;
             case 1:
-                PhotonNetwork.Instantiate(paladino.name, new Vector3(0, 3, 0), Quaternion.Euler(45, 45, 45), 0);
+                PhotonNetwork.Instantiate(paladino.name, new Vector3(1.5f, 1, -1.5f), Quaternion.Euler(0, 0, 0), 0);
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
-                depthCamera = -1;
-                mainCamera.depth.Equals(depthCamera);
+                Invoke(nameof(TempoPraTrocarDeCamera), 1);
                 break;
             case 2:
-                PhotonNetwork.Instantiate(cavaleiro.name, new Vector3(0, 10, 0), Quaternion.Euler(45, 45, 45), 0);
+                PhotonNetwork.Instantiate(cavaleiro.name, new Vector3(1.5f, 1, -1.5f), Quaternion.Euler(0,0,0), 0);
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
-                depthCamera = -1;
-                mainCamera.depth.Equals(depthCamera);
+                Invoke(nameof(TempoPraTrocarDeCamera), 1);
                 break;
             case 3:
-                PhotonNetwork.Instantiate(mago.name, new Vector3(0, 3, 0), Quaternion.Euler(45, 45, 45), 0);
+                PhotonNetwork.Instantiate(mago.name, new Vector3(1.5f, 1, -1.5f), Quaternion.Euler(0,0,0), 0);
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
-                depthCamera = -1;
-                mainCamera.depth.Equals(depthCamera);
+                Invoke(nameof(TempoPraTrocarDeCamera), 1);
                 break;
             case 4:
-                PhotonNetwork.Instantiate(machado.name, new Vector3(0, 3, 0), Quaternion.Euler(45, 45, 45), 0);
+                PhotonNetwork.Instantiate(machado.name, new Vector3(1.5f, 1, -1.5f), Quaternion.Euler(0,0,0), 0);
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
-                depthCamera = -1;
-                mainCamera.depth.Equals(depthCamera);
+                Invoke(nameof(TempoPraTrocarDeCamera), 1);
                 break;
         }
     }
@@ -83,5 +79,11 @@ public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
     public void EscolherMachado()
     {
         numeroPersonagem = 4;
+    }
+
+    public void TempoPraTrocarDeCamera()
+    {
+        depthCamera = -1;
+        mainCamera.depth = Camera.main.depth - 2;
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class PlayersManager : MonoBehaviour
 { 
@@ -8,8 +10,6 @@ public class PlayersManager : MonoBehaviour
     private Vector3 moveVelocity;
 
     public bool estaAtacando = false;
-    //[SerializeField]
-    //private PhotonView pv;
 
     public float vidaAtual;
     public float vidaMaxima = 100;
@@ -22,6 +22,7 @@ public class PlayersManager : MonoBehaviour
 
     public void Update()
     {
+
 		/*if (waitTime > 10 && hold == true)
 		{
 			if (foots > 10 && foots < 15)

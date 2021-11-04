@@ -87,7 +87,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13092}
     - Class: 114
-      Script: {instanceID: 13528}
+      Script: {instanceID: 13530}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -125,6 +125,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
@@ -154,13 +156,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11420}
     - Class: 114
+      Script: {instanceID: 11426}
+    - Class: 114
       Script: {instanceID: 11442}
     - Class: 114
+      Script: {instanceID: 11520}
+    - Class: 114
       Script: {instanceID: 11528}
+    - Class: 114
+      Script: {instanceID: 11674}
     - Class: 114
       Script: {instanceID: 12006}
     - Class: 114
       Script: {instanceID: 12082}
+    - Class: 114
+      Script: {instanceID: 12176}
     - Class: 114
       Script: {instanceID: 12208}
     - Class: 114
@@ -190,9 +200,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13442}
     - Class: 114
-      Script: {instanceID: 13528}
+      Script: {instanceID: 13530}
     - Class: 114
-      Script: {instanceID: 13558}
+      Script: {instanceID: 13560}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -279,6 +289,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11426}
     - Class: 114
+      Script: {instanceID: 11442}
+    - Class: 114
       Script: {instanceID: 11520}
     - Class: 114
       Script: {instanceID: 11528}
@@ -295,6 +307,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12184}
     - Class: 114
+      Script: {instanceID: 12298}
+    - Class: 114
       Script: {instanceID: 12364}
     - Class: 114
       Script: {instanceID: 12398}
@@ -309,11 +323,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13442}
     - Class: 114
-      Script: {instanceID: 13528}
+      Script: {instanceID: 13530}
     - Class: 114
-      Script: {instanceID: 13566}
-    - Class: 114
-      Script: {instanceID: 14446}
+      Script: {instanceID: 13568}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -461,7 +473,7 @@ ScriptsOnlyBuild:
     className: ChatGui
   - hash:
       serializedVersion: 2
-      Hash: 86fb97ca6c7dc25b82955f0e68a4f43b
+      Hash: 0a8c046eadb11440315f290fac0a7605
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EscolhaDePersonagens
@@ -563,7 +575,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 511192d1c80a65444cc90e67fa2ca5b9
+      Hash: 1039a57360702a2fe6226ed238edaece
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PaladinoScript
@@ -575,7 +587,7 @@ ScriptsOnlyBuild:
     className: DemoHubManager
   - hash:
       serializedVersion: 2
-      Hash: 7ce9af8deea85eb392aab798e6d026f0
+      Hash: ee37f08199e4507b8a53079a99e89f44
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: "Movimenta\xE7\xE3o"
@@ -923,7 +935,7 @@ ScriptsOnlyBuild:
     className: CurrentRoomIsOpenToggle
   - hash:
       serializedVersion: 2
-      Hash: 511192d1c80a65444cc90e67fa2ca5b9
+      Hash: 1039a57360702a2fe6226ed238edaece
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CavaleiroScript
@@ -1013,7 +1025,7 @@ ScriptsOnlyBuild:
     className: ChatAppIdCheckerUI
   - hash:
       serializedVersion: 2
-      Hash: 511192d1c80a65444cc90e67fa2ca5b9
+      Hash: 1039a57360702a2fe6226ed238edaece
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MachadoScript
@@ -1211,7 +1223,7 @@ ScriptsOnlyBuild:
     className: PlayerUI
   - hash:
       serializedVersion: 2
-      Hash: 511192d1c80a65444cc90e67fa2ca5b9
+      Hash: 1039a57360702a2fe6226ed238edaece
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MagoScript
@@ -1619,6 +1631,12 @@ ScriptsOnlyBuild:
     className: PhotonView
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PocoesGeral
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1778,4 +1796,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MenuPrincipal.unity
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/Creditos.unity
-  playerPath: E:/JogosUnity/EscapeFromTheDungeon/ProjetoFase9Grupo.exe
+  playerPath: E:/JogosUnity/EscapeFromTheDungeon/Escape From The Dungeon.exe

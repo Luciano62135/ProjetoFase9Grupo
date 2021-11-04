@@ -14,7 +14,9 @@ public class InimigoEsqueleto : ScriptInimigoPai
     public void Update()
     {
         numeroDoAtaque = Random.RandomRange(1, 2);
+        
         posicaoPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
+        
 
         float distance = Vector3.Distance(posicaoPlayer, transform.position);
 

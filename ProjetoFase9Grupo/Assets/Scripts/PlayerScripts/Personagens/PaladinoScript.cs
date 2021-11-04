@@ -6,6 +6,9 @@ using Photon.Realtime;
 
 public class PaladinoScript : PlayersManager
 {
+    [SerializeField]
+    private PhotonView pv;
+
     public Animator anim;
     private PlayerHud playerHud;
     private Rigidbody rig;
@@ -13,7 +16,7 @@ public class PaladinoScript : PlayersManager
     void Start()
     {
         playerHud = GameObject.Find("Canvas").GetComponent<PlayerHud>();
-        // pv = GetComponent<PhotonView>();
+        pv = GetComponent<PhotonView>();
         rig = GetComponent<Rigidbody>();
         camera = FindObjectOfType<Camera>();
         anim = GetComponent<Animator>();
@@ -22,19 +25,22 @@ public class PaladinoScript : PlayersManager
     // Update is called once per frame
     void Update()
     {
-        BotoesDeInteracao();
-        BotoesDeMovimentacao();
-
-        Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-        float rayLenght;
-
-        if (groundPlane.Raycast(cameraRay, out rayLenght))
+        if (pv.IsMine)
         {
-            Vector3 pontoPraOlhar = cameraRay.GetPoint(rayLenght);
-            Debug.DrawLine(cameraRay.origin, pontoPraOlhar, Color.blue);
+            BotoesDeInteracao();
+            BotoesDeMovimentacao();
 
-            transform.LookAt(new Vector3(pontoPraOlhar.x, transform.position.y, pontoPraOlhar.z));
+            Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
+            Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+            float rayLenght;
+
+            if (groundPlane.Raycast(cameraRay, out rayLenght))
+            {
+                Vector3 pontoPraOlhar = cameraRay.GetPoint(rayLenght);
+                Debug.DrawLine(cameraRay.origin, pontoPraOlhar, Color.blue);
+
+                transform.LookAt(new Vector3(pontoPraOlhar.x, transform.position.y, pontoPraOlhar.z));
+            }
         }
     }
 

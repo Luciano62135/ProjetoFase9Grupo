@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
+using Photon.Realtime;
 public class MagoScript : PlayersManager
 {
+    [SerializeField]
+    private PhotonView pv;
+
     public Animator anim;
     private PlayerHud playerHud;
     private Rigidbody rig;
@@ -12,7 +16,7 @@ public class MagoScript : PlayersManager
     void Start()
     {
         playerHud = GameObject.Find("Canvas").GetComponent<PlayerHud>();
-        // pv = GetComponent<PhotonView>();
+        pv = GetComponent<PhotonView>();
         rig = GetComponent<Rigidbody>();
         camera = FindObjectOfType<Camera>();
         anim = GetComponent<Animator>();
@@ -21,20 +25,24 @@ public class MagoScript : PlayersManager
     // Update is called once per frame
     void Update()
     {
-        BotoesDeInteracao();
-        BotoesDeMovimento();
-
-        Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-        float rayLenght;
-
-        if (groundPlane.Raycast(cameraRay, out rayLenght))
+        if (pv.IsMine)
         {
-            Vector3 pontoPraOlhar = cameraRay.GetPoint(rayLenght);
-            Debug.DrawLine(cameraRay.origin, pontoPraOlhar, Color.blue);
+            BotoesDeInteracao();
+            BotoesDeMovimento();
 
-            transform.LookAt(new Vector3(pontoPraOlhar.x, transform.position.y, pontoPraOlhar.z));
+            Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
+            Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+            float rayLenght;
+
+            if (groundPlane.Raycast(cameraRay, out rayLenght))
+            {
+                Vector3 pontoPraOlhar = cameraRay.GetPoint(rayLenght);
+                Debug.DrawLine(cameraRay.origin, pontoPraOlhar, Color.blue);
+
+                transform.LookAt(new Vector3(pontoPraOlhar.x, transform.position.y, pontoPraOlhar.z));
+            }
         }
+        
     }
 
     public void BotoesDeMovimento()
