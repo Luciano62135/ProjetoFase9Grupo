@@ -16,7 +16,7 @@ public class ArmaPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dano = Random.RandomRange(7, 14);
+        dano = Random.RandomRange(12, 20); 
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,6 +28,14 @@ public class ArmaPlayer : MonoBehaviour
         {
             FindObjectOfType<Audio__Manager>().Play("AtaqueNoEsqueleto");
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
+        }
+        else if (other.tag == "InimigoGuarda" && cavaleiro.estaAtacando == true)
+        {
+            other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
+        }
+        else
+        {
+
         }
     }
 }
