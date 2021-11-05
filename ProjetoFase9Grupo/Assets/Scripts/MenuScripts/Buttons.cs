@@ -28,21 +28,25 @@ public class Buttons : MonoBehaviour
 
     public void PlayButton()
     {
+        FindObjectOfType<Audio__Manager>().Play("Selecionar");
         SceneManager.LoadScene("SampleScene");
     }
 
     public void CreditosButton()
     {
+        FindObjectOfType<Audio__Manager>().Play("Selecionar");
         SceneManager.LoadScene("Creditos");
     }
 
     public void MenuButton()
     {
+        FindObjectOfType<Audio__Manager>().Play("Selecionar");
         SceneManager.LoadScene("MenuPrincipal");
     }
 
     public void QuitButton()
     {
+        FindObjectOfType<Audio__Manager>().Play("Selecionar");
         Application.Quit();
         
     }

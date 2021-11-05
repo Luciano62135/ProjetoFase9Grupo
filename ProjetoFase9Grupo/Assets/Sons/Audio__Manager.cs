@@ -7,6 +7,10 @@ public class Audio__Manager : MonoBehaviour
 
     public Sound[] sounds;
 
+    void Start()
+    {
+        //FindObjectOfType<Audio__Manager>().Play("Inicio");
+    }
     // Start is called before the first frame update
     void Awake()
     {

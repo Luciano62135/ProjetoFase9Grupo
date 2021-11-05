@@ -882,6 +882,24 @@ MonoBehaviour:
     pitch: 1.606
     loop: 0
     source: {fileID: 0}
+  - name: Coletar
+    clip: {fileID: 8300000, guid: 743e868e667c3d04684998b9fa9cbac7, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+  - name: Inicio
+    clip: {fileID: 8300000, guid: 2aa96313772bac1488cc23f908bdc8ac, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+  - name: "Bot\xE3o Come\xE7ar"
+    clip: {fileID: 8300000, guid: 2aa96313772bac1488cc23f908bdc8ac, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &569087291
 Transform:
   m_ObjectHideFlags: 0

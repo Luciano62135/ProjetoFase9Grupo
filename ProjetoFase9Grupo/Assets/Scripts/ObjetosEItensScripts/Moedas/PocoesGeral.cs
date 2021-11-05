@@ -15,6 +15,7 @@ public class PocoesGeral : MonoBehaviour
     {
         if (other.tag == "Player" && Input.GetKey(KeyCode.E))
         {
+            FindObjectOfType<Audio__Manager>().Play("Coletar");
             playerhud.pocoes++;
             Destroy(this.gameObject);
         }

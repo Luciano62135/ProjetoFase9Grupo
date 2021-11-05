@@ -21,6 +21,7 @@ public class MoedasGeral : MonoBehaviour
     {
         if (other.tag == "Player" && Input.GetKey(KeyCode.E))
         {
+            FindObjectOfType<Audio__Manager>().Play("Coletar");
             playerHud.Moedas += numeroDeMoedas;
             Destroy(this.gameObject);
         }

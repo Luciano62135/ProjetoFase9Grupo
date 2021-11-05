@@ -22,11 +22,12 @@ public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     public void Comecar()
     {
+        FindObjectOfType<Audio__Manager>().Play("Coletar");
         switch (numeroPersonagem)
         {
             case 0:
@@ -64,21 +65,25 @@ public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
     public void EscolherPaladino()
     {
         numeroPersonagem = 1;
+        FindObjectOfType<Audio__Manager>().Play("Coletar");
     }
 
     public void EscolherCavaleiro()
     {
         numeroPersonagem = 2;
+        FindObjectOfType<Audio__Manager>().Play("Coletar");
     }
 
     public void EscolherMago()
     {
         numeroPersonagem = 3;
+        FindObjectOfType<Audio__Manager>().Play("Coletar");
     }
 
     public void EscolherMachado()
     {
         numeroPersonagem = 4;
+        FindObjectOfType<Audio__Manager>().Play("Coletar");
     }
 
     public void TempoPraTrocarDeCamera()

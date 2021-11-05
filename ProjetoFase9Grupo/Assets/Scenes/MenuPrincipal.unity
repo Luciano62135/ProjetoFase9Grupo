@@ -329,6 +329,110 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212332797}
   m_CullTransparentMesh: 0
+--- !u!1 &277677364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 277677366}
+  - component: {fileID: 277677365}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &277677365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277677364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b32365845d8c24088317eb4f057d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Passos
+    clip: {fileID: 8300000, guid: efa46c0a445c0a24ca1e9c35b504e4af, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+  - name: DanoHumano
+    clip: {fileID: 8300000, guid: 6cb2c0ca73d1efc4f853c08a694fffbd, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+  - name: AtaqueNoEsqueleto
+    clip: {fileID: 8300000, guid: 26dfe27a7c797bd428f58a8388a4c41f, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+  - name: AtaqueNoGuarda
+    clip: {fileID: 8300000, guid: 6cb2c0ca73d1efc4f853c08a694fffbd, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+  - name: AtaqueNoAr
+    clip: {fileID: 8300000, guid: 6cb2c0ca73d1efc4f853c08a694fffbd, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+  - name: DanoNoEsqueleto
+    clip: {fileID: 8300000, guid: efeb71624321a3a4d8e0bbd0e412960a, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+  - name: Coletar
+    clip: {fileID: 8300000, guid: 743e868e667c3d04684998b9fa9cbac7, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+  - name: Inicio
+    clip: {fileID: 8300000, guid: 2aa96313772bac1488cc23f908bdc8ac, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+  - name: "Bot\xE3o Come\xE7ar"
+    clip: {fileID: 8300000, guid: 2aa96313772bac1488cc23f908bdc8ac, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+  - name: Selecionar
+    clip: {fileID: 8300000, guid: 953f81eca8990dc4bbd277adf2f781b4, type: 3}
+    volume: 0.465
+    pitch: 1.606
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &277677366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277677364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.1, y: 1.7570016, z: 4.4473853}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286320374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,7 +1431,7 @@ RectTransform:
   - {fileID: 2110384791}
   - {fileID: 1677589198}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2345,7 +2449,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1547203996
 MonoBehaviour:
@@ -2558,7 +2662,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1747395936
 MonoBehaviour:
@@ -2706,7 +2810,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1911284369
 GameObject:
