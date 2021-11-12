@@ -9,7 +9,6 @@ ScriptsOnlyBuild:
     - CavaleiroScript
     - Conectar
     - EscolhaDePersonagens
-    - InimigoBarraDeVida
     - InimigoEsqueleto
     - MoedasGeral
     - "Movimenta\xE7\xE3o"
@@ -17,6 +16,7 @@ ScriptsOnlyBuild:
     - Timer
     - VidaInimigoScript
     - VidaPlayer
+    - triggerSom
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -85,9 +85,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 13094}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13532}
+      Script: {instanceID: 13534}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -133,6 +133,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -168,6 +170,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12008}
     - Class: 114
+      Script: {instanceID: 12082}
+    - Class: 114
       Script: {instanceID: 12084}
     - Class: 114
       Script: {instanceID: 12178}
@@ -188,21 +192,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12742}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 12944}
     - Class: 114
-      Script: {instanceID: 12960}
+      Script: {instanceID: 12962}
     - Class: 114
-      Script: {instanceID: 12968}
+      Script: {instanceID: 12970}
     - Class: 114
-      Script: {instanceID: 13094}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13352}
+      Script: {instanceID: 13354}
     - Class: 114
-      Script: {instanceID: 13444}
+      Script: {instanceID: 13446}
     - Class: 114
-      Script: {instanceID: 13532}
+      Script: {instanceID: 13534}
     - Class: 114
-      Script: {instanceID: 13562}
+      Script: {instanceID: 13564}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -283,8 +287,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 11366}
-    - Class: 114
       Script: {instanceID: 11388}
     - Class: 114
       Script: {instanceID: 11428}
@@ -319,13 +321,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12698}
     - Class: 114
-      Script: {instanceID: 13094}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13444}
+      Script: {instanceID: 13446}
     - Class: 114
-      Script: {instanceID: 13532}
+      Script: {instanceID: 13534}
     - Class: 114
-      Script: {instanceID: 13570}
+      Script: {instanceID: 13572}
+    - Class: 114
+      Script: {instanceID: 13580}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1265,6 +1269,12 @@ ScriptsOnlyBuild:
     className: InputField
   - hash:
       serializedVersion: 2
+      Hash: a8b5dbd774adb429f6ee8a7b3eb828b5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuDePause
+  - hash:
+      serializedVersion: 2
       Hash: c9a8b80298a116835b51ba1cf9284367
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1751,6 +1761,12 @@ ScriptsOnlyBuild:
     className: InimigoEsqueleto
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: triggerSom
+  - hash:
+      serializedVersion: 2
       Hash: 5f4d6e57084c42d31cf00600fe2c939d
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1796,4 +1812,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MenuPrincipal.unity
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/Creditos.unity
-  playerPath: E:/JogosUnity/EscapeFromTheDungeon/Escape From The Dungeon.exe
+  playerPath: E:/JogosUnity/Prison Crawler/PrisonCrawler.exe
