@@ -13,6 +13,7 @@ public class InimigoEsqueleto : ScriptInimigoPai
 
     public void Update()
     {
+        FaceTarget();
         numeroDoAtaque = Random.RandomRange(1, 2);
         
         posicaoPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
