@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\InimigosScripts\ScriptInimigoPai.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\VidaInimigoScript.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\Buttons.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\Creditos.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MenuDePause.cs" />
     <Compile Include="Assets\Scripts\MultiplayerScripts\Conectar.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedasGeral.cs" />

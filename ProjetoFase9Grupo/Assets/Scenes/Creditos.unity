@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 327.27, y: -223.8}
+  m_AnchoredPosition: {x: 327, y: -200}
   m_SizeDelta: {x: 145.45834, y: 52.386765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516503356
@@ -204,7 +204,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 579309941}
-        m_MethodName: MenuButton
+        m_MethodName: SairMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -327,11 +327,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 579309937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79d8f66dc7acc542bc9ba0a028b4d0b, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ffe88eadc920804f88150cb90262c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  painelLogin: {fileID: 0}
-  menu: {fileID: 0}
 --- !u!1 &838436950
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,9 +482,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Programador: Luciano                            \n\nSons: Artur\n\nModelador/Artista
-    T\xE9cnico: Eduardo\n\nHUD/Menu: Gabriel\n\nLevel Design: Patrick\n\nGamers Designers:
-    Todo mundo\n\nColaboradores: SuperGeeks e professor"
+  m_Text: "Programador: Luciano                            \n\nSons: Artur\n\nModelador:
+    Eduardo \n\nHUD/Menu: Gabriel\n\nLevel Designer: Patrick\n\nGame Designers: Todo
+    mundo\n\nColaboradores: SuperGeeks e prof Andr\xE9"
 --- !u!222 &877425006
 CanvasRenderer:
   m_ObjectHideFlags: 0
