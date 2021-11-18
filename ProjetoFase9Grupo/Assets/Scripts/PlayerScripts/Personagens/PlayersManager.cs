@@ -10,6 +10,7 @@ public class PlayersManager : MonoBehaviour
     private Vector3 moveVelocity;
 
     public bool estaAtacando = false;
+	public bool ataqueEspecial = false;
 
     public float vidaAtual;
     public float vidaMaxima = 100;

@@ -708,13 +708,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445076270441832135}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1445076271509973321}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
 --- !u!20 &1445076270441832155
 Camera:
   m_ObjectHideFlags: 0
@@ -781,7 +781,7 @@ MonoBehaviour:
   pv: {fileID: 0}
   player: {fileID: 1445076271216057079}
   speed: 1
-  offset: {x: 0, y: 10, z: 0}
+  offset: {x: 0, y: 6, z: -4}
 --- !u!114 &1648818810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,6 +1423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estaAtacando: 0
+  ataqueEspecial: 0
   vidaAtual: 0
   vidaMaxima: 100
   barraDeVida: {fileID: 0}
@@ -1439,6 +1440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estaAtacando: 0
+  ataqueEspecial: 0
   vidaAtual: 0
   vidaMaxima: 100
   barraDeVida: {fileID: 0}
