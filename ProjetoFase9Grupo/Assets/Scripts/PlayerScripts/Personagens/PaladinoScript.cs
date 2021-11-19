@@ -101,24 +101,19 @@ public class PaladinoScript : PlayersManager
         {
             anim.SetBool("AtaqueNormal", false);
         }
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            transform.Translate(new Vector3(0, 0, -3 * Time.deltaTime));
-        }
-        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.Mouse1))
-        {
-            transform.Translate(new Vector3(0, 0, 3 * Time.deltaTime));
-        }
-        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.Mouse1))
-        {
-            transform.Translate(new Vector3(-3 * Time.deltaTime, 0, 0));
-        }
-        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.Mouse1))
-        {
-            transform.Translate(new Vector3(3 * Time.deltaTime, 0, 0));
+            anim.SetBool("AtacandoEspecial", true);
+            ataqueEspecial = true;
+            Invoke(nameof(TempoEntreOAtaque), 1);
         }
     }
 
+    public void TempoEntreOAtaque()
+    {
+        estaAtacando = false;
+        ataqueEspecial = false;
+    }
 
 
     /*Esses botões de interação sera usado para fazer o player usar itens consumiveis como a poção de vida, os outros tipos de interaçao
