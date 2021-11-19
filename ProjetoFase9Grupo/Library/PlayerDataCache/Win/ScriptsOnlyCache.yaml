@@ -39,6 +39,12 @@ ScriptsOnlyBuild:
     - Photon.Pun.ServerSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -583,7 +589,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 1039a57360702a2fe6226ed238edaece
+      Hash: 73433b456da939ae9ae88b5c55e95686
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PaladinoScript
@@ -697,7 +703,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: cb6a295257f9383500b3228852234cbc
+      Hash: 01a1d1034250b783d34f0d2906b274ae
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VidaPlayer
@@ -943,7 +949,7 @@ ScriptsOnlyBuild:
     className: CurrentRoomIsOpenToggle
   - hash:
       serializedVersion: 2
-      Hash: 1039a57360702a2fe6226ed238edaece
+      Hash: 73433b456da939ae9ae88b5c55e95686
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CavaleiroScript
@@ -955,7 +961,7 @@ ScriptsOnlyBuild:
     className: BarraDeVida
   - hash:
       serializedVersion: 2
-      Hash: cb6a295257f9383500b3228852234cbc
+      Hash: 01a1d1034250b783d34f0d2906b274ae
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayersManager
@@ -1033,7 +1039,7 @@ ScriptsOnlyBuild:
     className: ChatAppIdCheckerUI
   - hash:
       serializedVersion: 2
-      Hash: 1039a57360702a2fe6226ed238edaece
+      Hash: 73433b456da939ae9ae88b5c55e95686
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MachadoScript
@@ -1231,7 +1237,7 @@ ScriptsOnlyBuild:
     className: PlayerUI
   - hash:
       serializedVersion: 2
-      Hash: 1039a57360702a2fe6226ed238edaece
+      Hash: 73433b456da939ae9ae88b5c55e95686
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MagoScript
