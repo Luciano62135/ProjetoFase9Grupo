@@ -601,7 +601,7 @@ ScriptsOnlyBuild:
     className: DemoHubManager
   - hash:
       serializedVersion: 2
-      Hash: ee37f08199e4507b8a53079a99e89f44
+      Hash: 7ce9af8deea85eb392aab798e6d026f0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: "Movimenta\xE7\xE3o"

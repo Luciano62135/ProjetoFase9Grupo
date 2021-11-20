@@ -6,9 +6,6 @@ using Photon.Realtime;
 
 public class Movimentação : MonoBehaviour
 {
-    [SerializeField]
-    private PhotonView pv;
-
     public Transform player;
 
     public float speed = 0.125f;
@@ -17,18 +14,15 @@ public class Movimentação : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pv = GetComponent<PhotonView>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (pv.IsMine)
-        {
-            Vector3 posicaoDesejada = player.position + offset;
-            Vector3 posicaoSuavizada = Vector3.Lerp(transform.position, posicaoDesejada, speed);
-            transform.position = posicaoSuavizada;
-        }
+        Vector3 posicaoDesejada = player.position + offset;
+        Vector3 posicaoSuavizada = Vector3.Lerp(transform.position, posicaoDesejada, speed);
+        transform.position = posicaoSuavizada;
     }
 }
 
