@@ -37,6 +37,7 @@ public class Conectar : MonoBehaviourPunCallbacks
     public void TempoParaEntrarSala()
     {
         PhotonNetwork.LoadLevel("SampleScene");
+        
     }
 
     public void EntrarSala()

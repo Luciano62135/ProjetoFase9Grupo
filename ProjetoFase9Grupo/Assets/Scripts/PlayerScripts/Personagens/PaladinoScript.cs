@@ -107,6 +107,10 @@ public class PaladinoScript : PlayersManager
             ataqueEspecial = true;
             Invoke(nameof(TempoEntreOAtaque), 1);
         }
+        else
+        {
+            anim.SetBool("AtacandoEspecial", false);
+        }
     }
 
     public void TempoEntreOAtaque()
