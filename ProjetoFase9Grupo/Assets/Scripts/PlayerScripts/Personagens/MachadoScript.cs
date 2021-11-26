@@ -15,7 +15,7 @@ public class MachadoScript : PlayersManager
     private Camera camera;
     void Start()
     {
-        playerHud = GameObject.Find("Canvas").GetComponent<PlayerHud>();
+        playerHud = GameObject.Find("CanvasGeral").GetComponent<PlayerHud>();
         pv = GetComponent<PhotonView>();
         rig = GetComponent<Rigidbody>();
         camera = FindObjectOfType<Camera>();
