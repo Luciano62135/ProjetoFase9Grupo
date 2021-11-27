@@ -96,6 +96,7 @@ public class PaladinoScript : PlayersManager
         {
             anim.SetBool("AtaqueNormal", true);
             estaAtacando = true;
+            Invoke(nameof(TempoEntreOAtaque), 1);
         }
         else
         {
