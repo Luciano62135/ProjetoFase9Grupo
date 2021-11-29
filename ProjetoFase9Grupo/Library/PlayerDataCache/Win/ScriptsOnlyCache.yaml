@@ -2,22 +2,19 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ArmaPlayer
-    - ArmasInimigosScript
     - Audio__Manager
     - BarraDeVida
     - Buttons
     - CavaleiroScript
     - Conectar
     - Creditos
+    - EntrarMercado
     - EscolhaDePersonagens
-    - InimigoBarraDeVida
-    - InimigoEsqueleto
     - MenuDePause
-    - MoedasGeral
     - "Movimenta\xE7\xE3o"
+    - PaladinoScript
     - PlayerHud
     - Timer
-    - VidaInimigoScript
     - VidaPlayer
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
@@ -95,7 +92,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13098}
     - Class: 114
-      Script: {instanceID: 13536}
+      Script: {instanceID: 13538}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -170,6 +167,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11444}
     - Class: 114
+      Script: {instanceID: 11516}
+    - Class: 114
       Script: {instanceID: 11522}
     - Class: 114
       Script: {instanceID: 11530}
@@ -210,11 +209,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13356}
     - Class: 114
-      Script: {instanceID: 13448}
+      Script: {instanceID: 13450}
     - Class: 114
-      Script: {instanceID: 13536}
+      Script: {instanceID: 13538}
     - Class: 114
-      Script: {instanceID: 13566}
+      Script: {instanceID: 13568}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -295,13 +294,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 11366}
-    - Class: 114
       Script: {instanceID: 11388}
     - Class: 114
       Script: {instanceID: 11428}
     - Class: 114
       Script: {instanceID: 11444}
+    - Class: 114
+      Script: {instanceID: 11516}
     - Class: 114
       Script: {instanceID: 11522}
     - Class: 114
@@ -323,23 +322,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12366}
     - Class: 114
-      Script: {instanceID: 12400}
-    - Class: 114
-      Script: {instanceID: 12438}
-    - Class: 114
       Script: {instanceID: 12560}
-    - Class: 114
-      Script: {instanceID: 12698}
     - Class: 114
       Script: {instanceID: 12744}
     - Class: 114
       Script: {instanceID: 13098}
     - Class: 114
-      Script: {instanceID: 13448}
+      Script: {instanceID: 13366}
     - Class: 114
-      Script: {instanceID: 13536}
+      Script: {instanceID: 13450}
     - Class: 114
-      Script: {instanceID: 13574}
+      Script: {instanceID: 13538}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -350,9 +343,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
-    - Class: 195
-      Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -1585,6 +1580,12 @@ ScriptsOnlyBuild:
     className: OnlineDocButton
   - hash:
       serializedVersion: 2
+      Hash: 23c32ee7560934de793be81ed39e23b4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EntrarMercado
+  - hash:
+      serializedVersion: 2
       Hash: ea4e73561703f90fbdc820af646becad
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.SlotRacer
@@ -1828,4 +1829,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MenuPrincipal.unity
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/Creditos.unity
-  playerPath: E:/JogosUnity/Prison Crawler/EscapeFromTheDungeon.exe
+  playerPath: E:/JogosUnity/Prison Crawler/MonoBleedingEdge/EscapeFromTheDungeon.exe
