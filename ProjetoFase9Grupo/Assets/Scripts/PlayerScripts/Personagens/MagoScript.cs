@@ -42,7 +42,7 @@ public class MagoScript : PlayersManager
                 transform.LookAt(new Vector3(pontoPraOlhar.x, transform.position.y, pontoPraOlhar.z));
             }
         }
-        
+
     }
 
     public void BotoesDeMovimento()
@@ -97,11 +97,17 @@ public class MagoScript : PlayersManager
         {
             anim.SetBool("FeiticoNormal", true);
             estaAtacando = true;
+            Invoke(nameof(TempoEntreOAtaque), 1);
         }
         else
         {
             anim.SetBool("FeiticoNormal", false);
         }
+    }
+
+    public void TempoEntreOAtaque ()
+    {
+        estaAtacando = false;
     }
 
     /*Esses botões de interação sera usado para fazer o player usar itens consumiveis como a poção de vida, os outros tipos de interaçao

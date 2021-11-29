@@ -96,6 +96,8 @@
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\PocoesGeral.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Poções\UsaPocao.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\EscolhaDePersonagens.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\FeitiçosMago\BolaDeFogo.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\FeitiçosMago\FeitiçoMago.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Personagens\CavaleiroScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Personagens\MachadoScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Personagens\MagoScript.cs" />
