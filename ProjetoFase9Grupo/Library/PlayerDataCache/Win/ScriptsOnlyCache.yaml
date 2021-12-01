@@ -839,7 +839,7 @@ ScriptsOnlyBuild:
     className: CullArea
   - hash:
       serializedVersion: 2
-      Hash: c5126b6cd2dfcffba42b3dbf52f79d73
+      Hash: 0d8356afcc812ea40c8af4582c985442
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: "Feiti\xE7oMago"

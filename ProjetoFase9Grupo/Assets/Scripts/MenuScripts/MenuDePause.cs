@@ -16,13 +16,13 @@ public class MenuDePause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape) && estaNoPause == false)
+        if (Input.GetKey(KeyCode.P) && estaNoPause == false)
         {
             playerHud.SetActive(false);
             menuDePause.SetActive(true);
             estaNoPause = true;
         }
-        if (Input.GetKey(KeyCode.Escape) && estaNoPause == true)
+        if (Input.GetKey(KeyCode.P) && estaNoPause == true)
         {
             playerHud.SetActive(true);
             menuDePause.SetActive(false);
