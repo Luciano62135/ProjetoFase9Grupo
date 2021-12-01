@@ -8,6 +8,7 @@ public class FeitiçoMago : MonoBehaviour
 {
     public GameObject bolaDeFogo;
     public float delay;
+    public bool estaAtacando = false;
 
     [SerializeField]
     private PhotonView pv;
@@ -22,10 +23,18 @@ public class FeitiçoMago : MonoBehaviour
     {
         if (pv.IsMine)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && estaAtacando == false)
             {
-                Instantiate(bolaDeFogo, transform.position, transform.rotation);
+                Invoke(nameof(InvocarBolaDeFogo), 1.5f);
+                estaAtacando = true;
             }
         }
     }
+
+    public void InvocarBolaDeFogo()
+    {
+        Instantiate(bolaDeFogo, transform.position, transform.rotation);
+        estaAtacando = false;
+    }
+
 }

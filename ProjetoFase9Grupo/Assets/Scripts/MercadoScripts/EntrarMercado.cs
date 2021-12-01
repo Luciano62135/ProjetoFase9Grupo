@@ -26,22 +26,19 @@ public class EntrarMercado : MonoBehaviour
     }
 
     private void OnTriggerStay(Collider other)
-    {
-        if (pv.IsMine)
+    { 
+        if (other.tag == "Player")
         {
-            if (other.tag == "Player")
+            entrarMercadoText.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E) && estaNoMercado == false)
             {
-                entrarMercadoText.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.E) && estaNoMercado == false)
-                {
-                    mercado.SetActive(true);
-                    estaNoMercado = true;
-                }
-                else if (Input.GetKeyDown(KeyCode.E) && estaNoMercado == true)
-                {
-                    mercado.SetActive(false);
-                    estaNoMercado = false;
-                }
+                mercado.SetActive(true);
+                estaNoMercado = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.E) && estaNoMercado == true)
+            {
+                mercado.SetActive(false);
+                estaNoMercado = false;
             }
         }
         
@@ -49,13 +46,11 @@ public class EntrarMercado : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (pv.IsMine)
+        if (other.tag == "Player")
         {
-            if (other.tag == "Player")
-            {
-                entrarMercadoText.SetActive(false);
-                mercado.SetActive(false);
-            }
+            entrarMercadoText.SetActive(false);
+            mercado.SetActive(false);
         }
+        
     }
 }

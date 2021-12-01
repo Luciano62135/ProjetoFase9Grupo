@@ -4,12 +4,15 @@ ScriptsOnlyBuild:
     - ArmaPlayer
     - Audio__Manager
     - BarraDeVida
+    - BolaDeFogo
     - Buttons
     - CavaleiroScript
     - Conectar
     - Creditos
     - EntrarMercado
     - EscolhaDePersonagens
+    - "Feiti\xE7oMago"
+    - MagoScript
     - MenuDePause
     - "Movimenta\xE7\xE3o"
     - PaladinoScript
@@ -84,15 +87,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 11530}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 12008}
+      Script: {instanceID: 12012}
     - Class: 114
-      Script: {instanceID: 12886}
+      Script: {instanceID: 12890}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13102}
     - Class: 114
-      Script: {instanceID: 13538}
+      Script: {instanceID: 13542}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -161,59 +164,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 11422}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 11428}
+      Script: {instanceID: 11430}
     - Class: 114
-      Script: {instanceID: 11444}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11518}
     - Class: 114
-      Script: {instanceID: 11522}
+      Script: {instanceID: 11524}
     - Class: 114
-      Script: {instanceID: 11530}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11678}
     - Class: 114
-      Script: {instanceID: 12008}
+      Script: {instanceID: 12012}
     - Class: 114
-      Script: {instanceID: 12082}
+      Script: {instanceID: 12086}
     - Class: 114
-      Script: {instanceID: 12084}
+      Script: {instanceID: 12088}
     - Class: 114
-      Script: {instanceID: 12178}
+      Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12210}
+      Script: {instanceID: 12214}
     - Class: 114
-      Script: {instanceID: 12300}
+      Script: {instanceID: 12304}
     - Class: 114
-      Script: {instanceID: 12366}
+      Script: {instanceID: 12370}
     - Class: 114
-      Script: {instanceID: 12562}
+      Script: {instanceID: 12566}
     - Class: 114
-      Script: {instanceID: 12638}
+      Script: {instanceID: 12642}
     - Class: 114
-      Script: {instanceID: 12722}
+      Script: {instanceID: 12726}
     - Class: 114
-      Script: {instanceID: 12730}
+      Script: {instanceID: 12734}
     - Class: 114
-      Script: {instanceID: 12742}
+      Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 12946}
+      Script: {instanceID: 12950}
     - Class: 114
-      Script: {instanceID: 12964}
+      Script: {instanceID: 12968}
     - Class: 114
-      Script: {instanceID: 12972}
+      Script: {instanceID: 12976}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13102}
     - Class: 114
-      Script: {instanceID: 13356}
+      Script: {instanceID: 13360}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13454}
     - Class: 114
-      Script: {instanceID: 13538}
+      Script: {instanceID: 13542}
     - Class: 114
-      Script: {instanceID: 13568}
+      Script: {instanceID: 13572}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -294,48 +297,54 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 11388}
+      Script: {instanceID: 11296}
     - Class: 114
-      Script: {instanceID: 11428}
+      Script: {instanceID: 11390}
     - Class: 114
-      Script: {instanceID: 11444}
+      Script: {instanceID: 11430}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11522}
+      Script: {instanceID: 11524}
     - Class: 114
-      Script: {instanceID: 11530}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11678}
     - Class: 114
-      Script: {instanceID: 11804}
+      Script: {instanceID: 11806}
     - Class: 114
-      Script: {instanceID: 12008}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12082}
+      Script: {instanceID: 12012}
     - Class: 114
-      Script: {instanceID: 12178}
+      Script: {instanceID: 12086}
     - Class: 114
-      Script: {instanceID: 12186}
+      Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12300}
+      Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 12366}
+      Script: {instanceID: 12304}
     - Class: 114
-      Script: {instanceID: 12560}
+      Script: {instanceID: 12370}
     - Class: 114
-      Script: {instanceID: 12744}
+      Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 12664}
     - Class: 114
-      Script: {instanceID: 13366}
+      Script: {instanceID: 12748}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13102}
     - Class: 114
-      Script: {instanceID: 13538}
+      Script: {instanceID: 13370}
+    - Class: 114
+      Script: {instanceID: 13454}
+    - Class: 114
+      Script: {instanceID: 13542}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -414,6 +423,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: SmoothSyncMovement
+  - hash:
+      serializedVersion: 2
+      Hash: c39729282d0ec5d6b48119df4c4cd76b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BolaDeFogo
   - hash:
       serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
@@ -822,6 +837,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: CullArea
+  - hash:
+      serializedVersion: 2
+      Hash: c5126b6cd2dfcffba42b3dbf52f79d73
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: "Feiti\xE7oMago"
   - hash:
       serializedVersion: 2
       Hash: b25c2463ba9144686d18d7707733226b
@@ -1829,4 +1850,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MenuPrincipal.unity
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/Creditos.unity
-  playerPath: E:/JogosUnity/Prison Crawler/MonoBleedingEdge/EscapeFromTheDungeon.exe
+  playerPath: E:/JogosUnity/Prison Crawler/EscapeFromTheDungeon_Data/EscapeFromTheDungeon.exe

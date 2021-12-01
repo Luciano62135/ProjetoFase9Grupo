@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class BolaDeFogo : MonoBehaviour
 {
-    private Rigidbody rg;
+    private Rigidbody rb;
     public int velocidade;
 
     public GameObject mago;
     // Start is called before the first frame update
     void Start()
     {
-        rg = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        mago.transform.forward = transform.position;
-        rg.velocity = transform.position * velocidade;
+        rb.velocity = transform.right * velocidade;
     }
 }
