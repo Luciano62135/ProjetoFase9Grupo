@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\MercadoScripts\Comprar.cs" />
     <Compile Include="Assets\Scripts\MercadoScripts\EntrarMercado.cs" />
     <Compile Include="Assets\Scripts\MultiplayerScripts\Conectar.cs" />
+    <Compile Include="Assets\Scripts\MultiplayerScripts\VoltarMenu.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedasGeral.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\PocoesGeral.cs" />
     <Compile Include="Assets\Scripts\ObjetosEItensScripts\Poções\UsaPocao.cs" />

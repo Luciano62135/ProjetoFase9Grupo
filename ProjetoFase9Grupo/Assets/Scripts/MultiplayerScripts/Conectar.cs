@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class Conectar : MonoBehaviourPunCallbacks
 {
     [SerializeField]
-    private GameObject painelLogin, paineSala;
+    private GameObject painelLogin, paineSala, selecaoPersonagem;
     [SerializeField]
     private InputField nomeJogador, nomeSala;
 
@@ -31,7 +31,8 @@ public class Conectar : MonoBehaviourPunCallbacks
     public void CriarSala()
     {
         PhotonNetwork.CreateRoom(nomeSala.text, new RoomOptions(), TypedLobby.Default);
-        Invoke(nameof(TempoParaEntrarSala), 3);
+        paineSala.SetActive(false);
+        selecaoPersonagem.SetActive(true);
     }
 
     public void TempoParaEntrarSala()
@@ -43,7 +44,8 @@ public class Conectar : MonoBehaviourPunCallbacks
     public void EntrarSala()
     {
         PhotonNetwork.JoinRoom(nomeSala.text);
-        Invoke(nameof(TempoParaEntrarSala), 3);
+        paineSala.SetActive(false);
+        selecaoPersonagem.SetActive(true);
     }
 
     public void EntrarEmSalaAleatoria()
