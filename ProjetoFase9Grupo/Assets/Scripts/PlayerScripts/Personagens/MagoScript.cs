@@ -43,6 +43,11 @@ public class MagoScript : PlayersManager
             }
         }
 
+        if (!pv.IsMine)
+        {
+            camera.enabled = false;
+        }
+
     }
 
     public void BotoesDeMovimento()
