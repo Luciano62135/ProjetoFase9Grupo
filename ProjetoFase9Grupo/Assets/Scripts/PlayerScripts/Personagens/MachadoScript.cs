@@ -42,6 +42,11 @@ public class MachadoScript : PlayersManager
                 transform.LookAt(new Vector3(pontoPraOlhar.x, transform.position.y, pontoPraOlhar.z));
             }
         }
+
+        if (!pv.IsMine)
+        {
+            camera.enabled = false;
+        }
     }
 
     public void BotoesDeMovimento()
