@@ -9,8 +9,10 @@ public class PlayerHud : MonoBehaviour
     public Text pocoesText;
     public float cura = 30;
 
-    public int Moedas;
-    public Text MoedasText;
+    public int moedas;
+    public Text moedasText;
+
+    public Text moedasMercado;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,8 @@ public class PlayerHud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoedasText.text = "" + Moedas;
+        moedasMercado.text = "" + moedas;
+        moedasText.text = "" + moedas;
         pocoesText.text = "" + pocoes;
     }
 }

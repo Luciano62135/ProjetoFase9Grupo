@@ -22,7 +22,7 @@ public class MoedasGeral : MonoBehaviour
         if (other.tag == "Player" && Input.GetKey(KeyCode.E))
         {
             FindObjectOfType<Audio__Manager>().Play("Coletar");
-            playerHud.Moedas += numeroDeMoedas;
+            playerHud.moedas += numeroDeMoedas;
             Destroy(this.gameObject);
         }
     }

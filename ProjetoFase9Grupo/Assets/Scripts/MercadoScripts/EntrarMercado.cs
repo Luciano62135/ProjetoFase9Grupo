@@ -13,6 +13,11 @@ public class EntrarMercado : MonoBehaviour
 
     PhotonView pv;
 
+    public bool cavaleiro;
+    public bool paladino;
+    public bool mago;
+    public bool machado;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +45,23 @@ public class EntrarMercado : MonoBehaviour
                 mercado.SetActive(false);
                 estaNoMercado = false;
             }
+
+            if (other.gameObject.name == "CavaleiroPhoton") 
+            {
+                cavaleiro = true;
+            }
+            else if (other.gameObject.name == "PaladinoPhoton")
+            {
+                paladino = true;
+            }
+            else if (other.gameObject.name == "")
+            {
+                mago = true;
+            }
+            else if (other.gameObject.name == "")
+            {
+                machado = true;
+            }
         }
         
     }
@@ -50,6 +72,24 @@ public class EntrarMercado : MonoBehaviour
         {
             entrarMercadoText.SetActive(false);
             mercado.SetActive(false);
+
+
+            if (other.gameObject.name == "ybot")
+            {
+                cavaleiro = false;
+            }
+            else if (other.gameObject.name == "ybot")
+            {
+                paladino = false;
+            }
+            else if (other.gameObject.name == "ybot")
+            {
+                mago = false;
+            }
+            else if (other.gameObject.name == "ybot")
+            {
+                machado = false;
+            }
         }
         
     }
