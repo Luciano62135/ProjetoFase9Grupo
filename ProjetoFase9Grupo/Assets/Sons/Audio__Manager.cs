@@ -9,7 +9,8 @@ public class Audio__Manager : MonoBehaviour
 
     void Start()
     {
-        //FindObjectOfType<Audio__Manager>().Play("Inicio");
+       FindObjectOfType<Audio__Manager>().Play("Inicio");
+       FindObjectOfType<Audio__Manager>().Play("musica de fundo");
     }
     // Start is called before the first frame update
     void Awake()

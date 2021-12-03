@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class triggerSom : MonoBehaviour
 {
+    public bool somTrigger;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -17,6 +19,11 @@ public class triggerSom : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        FindObjectOfType<Audio__Manager>().Play("DanoHumano");
+        if (other.tag == "Player")
+        {
+            FindObjectOfType<Audio__Manager>().Play("DanoHumano");
+            Destroy(gameObject);
+        }
     }
+
 }
