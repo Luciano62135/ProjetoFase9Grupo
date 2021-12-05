@@ -64,20 +64,52 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
+    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
+    <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
+    <Compile Include="Assets\Scripts\Armas\ArmasInimigos\ArmasInimigosScript.cs" />
+    <Compile Include="Assets\Scripts\Armas\ArmasPlayers\ArmaPlayer.cs" />
+    <Compile Include="Assets\Scripts\CameraScripts\Movimentação.cs" />
+    <Compile Include="Assets\Scripts\HudScripts\BarraDeVida.cs" />
+    <Compile Include="Assets\Scripts\HudScripts\InimigoBarraDeVida.cs" />
+    <Compile Include="Assets\Scripts\HudScripts\PlayerHud.cs" />
+    <Compile Include="Assets\Scripts\InimigosScripts\InimigoEsqueleto.cs" />
+    <Compile Include="Assets\Scripts\InimigosScripts\ScriptInimigoPai.cs" />
+    <Compile Include="Assets\Scripts\InimigosScripts\VidaInimigoScript.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\Buttons.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\Creditos.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\MenuDePause.cs" />
     <Compile Include="Assets\Scripts\MercadoScripts\Comprar.cs" />
     <Compile Include="Assets\Scripts\MercadoScripts\EntrarMercado.cs" />
     <Compile Include="Assets\Scripts\MultiplayerScripts\Conectar.cs" />
     <Compile Include="Assets\Scripts\MultiplayerScripts\VoltarMenu.cs" />
+    <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\MoedasGeral.cs" />
+    <Compile Include="Assets\Scripts\ObjetosEItensScripts\Moedas\PocoesGeral.cs" />
+    <Compile Include="Assets\Scripts\ObjetosEItensScripts\Poções\UsaPocao.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\EscolhaDePersonagens.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\FeitiçosMago\BolaDeFogo.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\FeitiçosMago\FeitiçoMago.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Personagens\CavaleiroScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Personagens\MachadoScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Personagens\MagoScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Personagens\PaladinoScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Personagens\PlayersManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\VidaPlayer.cs" />
+    <Compile Include="Assets\Scripts\Timer\Timer.cs" />
     <Compile Include="Assets\SliderVolume.cs" />
     <Compile Include="Assets\Sons\Audio__Manager.cs" />
+    <Compile Include="Assets\Sons\Sound.cs" />
     <Compile Include="Assets\VolumeSlide.cs" />
     <Compile Include="Assets\triggerSom.cs" />
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
@@ -650,9 +682,45 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
+      <Project>{205A871D-BC15-2FC8-8EA6-563E59B0DABA}</Project>
+      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
+      <Project>{A4D6EF73-1A1D-2DD3-8272-AF9EC4A4664C}</Project>
+      <Name>PunDemos.DemoHubEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
+      <Project>{482C6FF7-B7E6-56D2-169B-E48ADD7FC5A6}</Project>
+      <Name>PunDemos.DemoSlotcarEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
+      <Project>{4609887F-BD09-9757-7F40-6AE11FECE25B}</Project>
+      <Name>PhotonUnityNetworking.Demos</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
+      <Project>{FF5CDF30-595B-438C-9AEF-7F1DF3FECCBA}</Project>
+      <Name>PhotonUnityNetworking.Utilities</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
       <Project>{01BADD3C-F722-BF54-ABB2-71D827086C7A}</Project>
       <Name>PhotonRealtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.csproj">
+      <Project>{3F19DAD2-2B91-4527-E769-8732DD718DB2}</Project>
+      <Name>PhotonUnityNetworking</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonChat.csproj">
+      <Project>{B8B56A99-FDF0-4A6F-0C0C-2831C34EE84E}</Project>
+      <Name>PhotonChat</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
+      <Project>{A0B6FAF1-5C1D-C3CF-35E8-CE33E06A423C}</Project>
+      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
+      <Project>{5535ACE2-D275-FBC8-B2FF-B7173D7882C9}</Project>
+      <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
