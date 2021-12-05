@@ -98,11 +98,11 @@
      <Compile Include="Assets\Scripts\PlayerScripts\Personagens\PlayersManager.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\VidaPlayer.cs" />
      <Compile Include="Assets\Scripts\Timer\Timer.cs" />
-     <Compile Include="Assets\SliderVolume.cs" />
+     <Compile Include="Assets\Scripts\sons\SliderVolume.cs" />
+     <Compile Include="Assets\Scripts\sons\VolumeSlide.cs" />
+     <Compile Include="Assets\Scripts\sons\triggerSom.cs" />
      <Compile Include="Assets\Sons\Audio__Manager.cs" />
      <Compile Include="Assets\Sons\Sound.cs" />
-     <Compile Include="Assets\VolumeSlide.cs" />
-     <Compile Include="Assets\triggerSom.cs" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
      <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
