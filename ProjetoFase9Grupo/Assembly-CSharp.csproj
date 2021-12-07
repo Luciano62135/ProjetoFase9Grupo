@@ -80,6 +80,9 @@
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Scripts\Armas\ArmasInimigos\ArmasInimigosScript.cs" />
     <Compile Include="Assets\Scripts\Armas\ArmasPlayers\ArmaPlayer.cs" />
+    <Compile Include="Assets\Scripts\Armas\ArmasPlayers\EspadaCavaleiro.cs" />
+    <Compile Include="Assets\Scripts\Armas\ArmasPlayers\EspadaPaladino.cs" />
+    <Compile Include="Assets\Scripts\Armas\ArmasPlayers\Machado.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\Movimentação.cs" />
     <Compile Include="Assets\Scripts\HudScripts\BarraDeVida.cs" />
     <Compile Include="Assets\Scripts\HudScripts\InimigoBarraDeVida.cs" />
