@@ -46,6 +46,7 @@ public class CavaleiroScript : PlayersManager
         if (!pv.IsMine)
         {
             camera.enabled = false;
+            playerHud.enabled = false;
         }
     }
 

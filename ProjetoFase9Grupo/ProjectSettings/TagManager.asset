@@ -5,9 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - FxTemporaire
-  - Inimigo
   - InimigoGuarda
   - InimigoEsqueleto
+  - CameraPlayer
   layers:
   - Default
   - TransparentFX

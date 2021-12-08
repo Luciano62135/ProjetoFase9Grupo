@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class InimigoBarraDeVida : MonoBehaviour
 {
-    public Transform cam;
+    [SerializeField]
+    private Transform cam;
 
     void LateUpdate()
     {
-        
+        cam = GameObject.FindGameObjectWithTag("CameraPlayer").GetComponent<Transform>();
         transform.LookAt(transform.position + cam.forward);
     }
 }

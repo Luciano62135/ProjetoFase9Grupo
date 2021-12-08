@@ -11,6 +11,7 @@ public class EntrarMercado : MonoBehaviour
     public GameObject entrarMercadoText;
     public bool estaNoMercado;
 
+    [SerializeField]
     PhotonView pv;
 
     public bool cavaleiro;
@@ -21,7 +22,7 @@ public class EntrarMercado : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        pv = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -37,8 +38,16 @@ public class EntrarMercado : MonoBehaviour
             entrarMercadoText.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E) && estaNoMercado == false)
             {
-                mercado.SetActive(true);
-                estaNoMercado = true;
+                if (!pv.IsMine)
+                {
+                    mercado.SetActive(false);
+                    estaNoMercado = false;
+                }
+                else
+                {
+                    mercado.SetActive(true);
+                    estaNoMercado = true;
+                }
             }
             else if (Input.GetKeyDown(KeyCode.E) && estaNoMercado == true)
             {
@@ -46,21 +55,36 @@ public class EntrarMercado : MonoBehaviour
                 estaNoMercado = false;
             }
 
-            if (other.gameObject.name == "CavaleiroPhoton") 
+            if (other.gameObject.name == "Cavaleiro") 
             {
                 cavaleiro = true;
             }
-            else if (other.gameObject.name == "PaladinoPhoton")
+            else if (other.gameObject.name == "Paladino")
             {
                 paladino = true;
+            
             }
-            else if (other.gameObject.name == "")
+            else if (other.gameObject.name == "Mago")
             {
-                mago = true;
+                if (!pv.IsMine)
+                {
+                    mago = false;
+                }
+                else
+                {
+                    mago = true;
+                }
             }
-            else if (other.gameObject.name == "")
+            else if (other.gameObject.name == "CaraDoMachado")
             {
-                machado = true;
+                if (!pv.IsMine)
+                {
+                    machado = false;
+                }
+                else
+                {
+                    machado = true;
+                }
             }
         }
         
@@ -74,19 +98,19 @@ public class EntrarMercado : MonoBehaviour
             mercado.SetActive(false);
 
 
-            if (other.gameObject.name == "ybot")
+            if (other.gameObject.name == "CavaleiroPhoton")
             {
                 cavaleiro = false;
             }
-            else if (other.gameObject.name == "ybot")
+            else if (other.gameObject.name == "PaladinoPhoton")
             {
                 paladino = false;
             }
-            else if (other.gameObject.name == "ybot")
+            else if (other.gameObject.name == "MagoPhoton")
             {
                 mago = false;
             }
-            else if (other.gameObject.name == "ybot")
+            else if (other.gameObject.name == "CaraDoMachadoPhoton")
             {
                 machado = false;
             }

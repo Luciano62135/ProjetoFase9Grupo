@@ -99,20 +99,6 @@ MonoBehaviour:
   player: {fileID: 7607979821048374936}
   speed: 1
   offset: {x: 0, y: 6, z: 4}
---- !u!136 &8529361530512743647
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7124459290204437538}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 4.215589
-  m_Height: 32.341618
-  m_Direction: 1
-  m_Center: {x: 0.04780889, y: 0.6576936, z: 0}
 --- !u!54 &8278568593911572038
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -129,66 +115,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &5016484253491999569
-MonoBehaviour:
+--- !u!136 &8529361530512743647
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7124459290204437538}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c270d199901100b42bade36e18c9e127, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  estaAtacando: 0
-  ataqueEspecial: 0
-  vidaAtual: 0
-  vidaMaxima: 100
-  barraDeVida: {fileID: 0}
-  pv: {fileID: 0}
-  anim: {fileID: 4572514276657364194}
---- !u!114 &8620878776289699062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7124459290204437538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 0
-  ObservedComponents:
-  - {fileID: 7806944636423983528}
-  - {fileID: 4676399214185722033}
-  - {fileID: 6325243285637586944}
-  sceneViewId: 2
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &7806944636423983528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7124459290204437538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
+  m_Radius: 4.215589
+  m_Height: 32.341618
+  m_Direction: 1
+  m_Center: {x: 0.04780889, y: 0.6576936, z: 0}
 --- !u!114 &4676399214185722033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +165,25 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
+--- !u!114 &5016484253491999569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7124459290204437538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c270d199901100b42bade36e18c9e127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estaAtacando: 0
+  ataqueEspecial: 0
+  vidaAtual: 0
+  vidaMaxima: 100
+  barraDeVida: {fileID: 0}
+  pv: {fileID: 0}
+  anim: {fileID: 4572514276657364194}
 --- !u!114 &6325243285637586944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,6 +200,47 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 0
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &7806944636423983528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7124459290204437538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &8620878776289699062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7124459290204437538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 0
+  ObservedComponents:
+  - {fileID: 7806944636423983528}
+  - {fileID: 4676399214185722033}
+  - {fileID: 6325243285637586944}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &7956599597200953539
 GameObject:
   m_ObjectHideFlags: 0

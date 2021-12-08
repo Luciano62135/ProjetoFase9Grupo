@@ -8,8 +8,7 @@ public class EspadaPaladino : MonoBehaviour
 
     private float dano;
 
-    [SerializeField]
-    private float danoMinimo, danoMaximo;
+    public float danoMinimo, danoMaximo;
     // Start is called before the first frame update
     void Start()
     {

@@ -13,7 +13,7 @@ public class MoedasGeral : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerHud = GameObject.Find("Canvas").GetComponent<PlayerHud>();
+        playerHud = GameObject.Find("CanvasGeral").GetComponent<PlayerHud>();
         numeroDeMoedas = Random.RandomRange(numeroMinimoDeMoedas, numeroMaximoDeMoedas);
     }
 
