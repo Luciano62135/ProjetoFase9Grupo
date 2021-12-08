@@ -7,7 +7,7 @@ public class Machado : MonoBehaviour
 {
     MachadoScript caraDoMachado;
 
-    private float dano;
+    public float dano;
 
     [SerializeField]
     private float danoMinimo, danoMaximo;
@@ -28,11 +28,11 @@ public class Machado : MonoBehaviour
     {
         caraDoMachado = GameObject.FindGameObjectWithTag("Player").GetComponent<MachadoScript>();
 
-        if (other.tag == "Inimigo" && caraDoMachado.estaAtacando == true)
+        if (other.tag == "InimigoEsqueleto" && caraDoMachado.estaAtacando == true)
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
         }
-        else if (other.tag == "Inimigo" && caraDoMachado.ataqueEspecial == true)
+        else if (other.tag == "InimigoEsqueleto" && caraDoMachado.ataqueEspecial == true)
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2);
         }

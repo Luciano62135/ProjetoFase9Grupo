@@ -22,7 +22,7 @@ public class ArmasInimigosScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         VidaPlayer vidaPlayer = GetComponent<VidaPlayer>();
-        esqueleto = GameObject.FindGameObjectWithTag("Inimigo").GetComponent<InimigoEsqueleto>();
+        esqueleto = GameObject.FindGameObjectWithTag("InimigoEsqueleto").GetComponent<InimigoEsqueleto>();
 
         if (other.tag == "Player" && esqueleto.estaAtacando == true)
         {
