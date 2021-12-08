@@ -26,9 +26,9 @@ public class Machado : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        caraDoMachado = GameObject.FindGameObjectWithTag("Player").GetComponent<MachadoScript>();
+        caraDoMachado = GameObject.Find("CaraDoMachado").GetComponent<MachadoScript>();
 
-        if (other.tag == "InimigoEsqueleto" && caraDoMachado.estaAtacando == true)
+        if (other.gameObject.tag == "InimigoEsqueleto" && caraDoMachado.estaAtacando == true)
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
         }

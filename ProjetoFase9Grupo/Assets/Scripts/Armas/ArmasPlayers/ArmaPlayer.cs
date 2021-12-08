@@ -24,7 +24,7 @@ public class ArmaPlayer : MonoBehaviour
         VidaPlayer vidaPlayer = GetComponent<VidaPlayer>();
         cavaleiro = GameObject.FindGameObjectWithTag("Player").GetComponent<CavaleiroScript>();
 
-        if (other.tag == "Inimigo" && cavaleiro.estaAtacando == true)
+        if (other.tag == "InimigoEsqueleto" && cavaleiro.estaAtacando == true)
         {
             FindObjectOfType<Audio__Manager>().Play("AtaqueNoEsqueleto");
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
