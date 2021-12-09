@@ -103,7 +103,7 @@ public class CavaleiroScript : PlayersManager
             
             anim.SetBool("AtacandoNormal", true);
             estaAtacando = true;
-            Invoke(nameof(TempoEntreOAtaque), 1);
+            Invoke(nameof(TempoEntreOAtaque), 2);
             
         }
         else
@@ -114,7 +114,7 @@ public class CavaleiroScript : PlayersManager
         {
             anim.SetBool("AtacandoEspecial", true);
             ataqueEspecial = true;
-            Invoke(nameof(TempoEntreOAtaque), 1);
+            Invoke(nameof(TempoEntreOAtaqueEspecial), 3);
         }
         else
         {
@@ -125,6 +125,10 @@ public class CavaleiroScript : PlayersManager
     public void TempoEntreOAtaque()
     {
         estaAtacando = false;
+    }
+
+    public void TempoEntreOAtaqueEspecial()
+    {
         ataqueEspecial = false;
     }
 
@@ -133,15 +137,6 @@ public class CavaleiroScript : PlayersManager
     */
     public void BotoesDeInteracao()
     {
-        if (Input.GetButtonDown("UsarCura") && playerHud.pocoes > 0)
-        {
-            playerHud.pocoes--;
-            VidaPlayer vida = GameObject.FindGameObjectWithTag("Player").GetComponent<VidaPlayer>();
-            vida.vidaAtual += playerHud.cura;
-            if (vida.vidaAtual > vida.vidaMaxima)
-            {
-                vida.vidaAtual = vida.vidaMaxima;
-            }
-        }
+
     }
 }

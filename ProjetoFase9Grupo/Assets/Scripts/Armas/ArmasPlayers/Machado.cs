@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 
 public class Machado : MonoBehaviour
@@ -11,16 +13,17 @@ public class Machado : MonoBehaviour
 
     public float danoMinimo, danoMaximo;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         dano = Random.RandomRange(danoMinimo, danoMaximo);
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,6 +32,7 @@ public class Machado : MonoBehaviour
 
         if (other.gameObject.tag == "InimigoEsqueleto" && caraDoMachado.estaAtacando == true)
         {
+
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
         }
         else if (other.tag == "InimigoEsqueleto" && caraDoMachado.ataqueEspecial == true)

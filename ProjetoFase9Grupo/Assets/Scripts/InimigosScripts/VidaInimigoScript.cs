@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class VidaInimigoScript : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class VidaInimigoScript : MonoBehaviour
     public GameObject moedaCobre;
     public int chanceDaMoeda;
 
+    PhotonView pv;
+
+    public float danoRecebido;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +26,15 @@ public class VidaInimigoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
+    public void ChamarTakeDamage(float dano)
+    {
+        pv.RPC("TakeDamage", RpcTarget.All);
+    }
+
+    [PunRPC]
     public void TakeDamage(float dano)
     {
 

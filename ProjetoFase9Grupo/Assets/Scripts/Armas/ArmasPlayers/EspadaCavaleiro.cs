@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class EspadaCavaleiro : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class EspadaCavaleiro : MonoBehaviour
 
     public float danoMinimo, danoMaximo;
 
+    PhotonView pv;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +21,11 @@ public class EspadaCavaleiro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pv.RPC("OnTriggerEnter", RpcTarget.All);
         dano = Random.RandomRange(danoMinimo, danoMaximo);
     }
 
+    [PunRPC]
     private void OnTriggerEnter(Collider other)
     {
         cavaleiro = GameObject.FindGameObjectWithTag("Player").GetComponent<CavaleiroScript>();

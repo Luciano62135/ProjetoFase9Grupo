@@ -36,25 +36,25 @@ public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
                 Comecar();
                 break;
             case 1:
-                PhotonNetwork.Instantiate(paladino.name, new Vector3(1.5f, 1, -1.5f), Quaternion.Euler(0, 0, 0), 0);
+                PhotonNetwork.Instantiate(paladino.name, new Vector3(-4, 0, -27), Quaternion.Euler(0, 0, 0), 0);
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);
                 break;
             case 2:
-                PhotonNetwork.Instantiate(cavaleiro.name, new Vector3(1.5f, 1, -1.5f), Quaternion.Euler(0,0,0), 0);
+                PhotonNetwork.Instantiate(cavaleiro.name, new Vector3(-4, 0, 33), Quaternion.Euler(0,0,0), 0);
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);
                 break;
             case 3:
-                PhotonNetwork.Instantiate(mago.name, new Vector3(1.5f, 1, -1.5f), Quaternion.Euler(0,0,0), 0);
+                PhotonNetwork.Instantiate(mago.name, new Vector3(8.5f, 0, 33), Quaternion.Euler(0,0,0), 0);
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);
                 break;
             case 4:
-                PhotonNetwork.Instantiate(machado.name, new Vector3(1.5f, 1, -1.5f), Quaternion.Euler(0,0,0), 0);
+                PhotonNetwork.Instantiate(machado.name, new Vector3(8.5f, 0, 27f), Quaternion.Euler(0,0,0), 0);
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);

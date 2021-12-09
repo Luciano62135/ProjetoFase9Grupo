@@ -7,6 +7,7 @@ public class MenuDePause : MonoBehaviour
 {
     public GameObject menuDePause, playerHud, configuracoes;
     public bool estaNoPause = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,16 +17,17 @@ public class MenuDePause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.P) && estaNoPause == false)
+        if (Input.GetKeyUp(KeyCode.P) && estaNoPause == false)
         {
             playerHud.SetActive(false);
             menuDePause.SetActive(true);
             estaNoPause = true;
         }
-        if (Input.GetKey(KeyCode.P) && estaNoPause == true)
+        else if (Input.GetKeyUp(KeyCode.P) && estaNoPause == true)
         {
             playerHud.SetActive(true);
             menuDePause.SetActive(false);
+            estaNoPause = false;
         }
     }
 

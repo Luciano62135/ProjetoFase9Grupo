@@ -533,7 +533,7 @@ MonoBehaviour:
     m_Bits: 512
   tempoEntreOAtaque: 1.5
   numeroDoAtaque: 0
-  alcanceDeVisao: 10
+  alcanceDeVisao: 4
   AlcanceDoAtaque: 2
   posicaoPlayer: {x: 0, y: 0, z: 0}
   estaAtacando: 0

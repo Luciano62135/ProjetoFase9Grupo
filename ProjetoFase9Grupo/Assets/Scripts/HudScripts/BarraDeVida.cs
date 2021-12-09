@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class BarraDeVida : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class BarraDeVida : MonoBehaviour
     public Gradient gradient;
     public Image preenchimentoVida;
 
+    PhotonView pv;
+
+    [PunRPC]
     public void SetarVidaMaxima(float vida)
     {
         slider.maxValue = vida;
@@ -18,6 +23,7 @@ public class BarraDeVida : MonoBehaviour
         preenchimentoVida.color = gradient.Evaluate(1f);
     }
 
+    [PunRPC]
     public void SetarVida(float vida)
     {
         slider.value = vida;
@@ -27,6 +33,6 @@ public class BarraDeVida : MonoBehaviour
 
     public void Update()
     {
-        
+
     }
 }

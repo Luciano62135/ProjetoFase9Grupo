@@ -84,6 +84,9 @@
     <Compile Include="Assets\Scripts\Armas\ArmasPlayers\EspadaPaladino.cs" />
     <Compile Include="Assets\Scripts\Armas\ArmasPlayers\Machado.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\Movimentação.cs" />
+    <Compile Include="Assets\Scripts\Dialogo\Dialogo.cs" />
+    <Compile Include="Assets\Scripts\Dialogo\DialogoColisão.cs" />
+    <Compile Include="Assets\Scripts\Dialogo\DialogoManager.cs" />
     <Compile Include="Assets\Scripts\HudScripts\BarraDeVida.cs" />
     <Compile Include="Assets\Scripts\HudScripts\InimigoBarraDeVida.cs" />
     <Compile Include="Assets\Scripts\HudScripts\PlayerHud.cs" />

@@ -714,7 +714,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "CR\xC8DITOS"
+  m_Text: "CR\xC9DITOS"
 --- !u!222 &1294060013
 CanvasRenderer:
   m_ObjectHideFlags: 0

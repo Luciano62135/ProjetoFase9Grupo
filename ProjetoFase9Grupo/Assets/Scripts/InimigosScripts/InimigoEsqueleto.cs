@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class InimigoEsqueleto : ScriptInimigoPai
 {
     public bool estaAtacando = false;
+
+    PhotonView pv;
     public void Start()
     {
         esqueletoAnim = GetComponent<Animator>();
@@ -14,6 +18,7 @@ public class InimigoEsqueleto : ScriptInimigoPai
     public void Update()
     {
         FaceTarget();
+
         numeroDoAtaque = Random.RandomRange(1, 2);
         
         posicaoPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
@@ -57,6 +62,7 @@ public class InimigoEsqueleto : ScriptInimigoPai
             esqueletoAnim.SetBool("Andando", false);
         }
     }
+
 
     public void TempoEntreOAtaque()
     {

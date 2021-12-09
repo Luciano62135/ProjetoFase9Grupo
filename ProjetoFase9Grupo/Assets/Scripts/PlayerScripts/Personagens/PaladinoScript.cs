@@ -101,7 +101,7 @@ public class PaladinoScript : PlayersManager
         {
             anim.SetBool("AtaqueNormal", true);
             estaAtacando = true;
-            Invoke(nameof(TempoEntreOAtaque), 1);
+            Invoke(nameof(TempoEntreOAtaque), 2);
         }
         else
         {
@@ -111,7 +111,7 @@ public class PaladinoScript : PlayersManager
         {
             anim.SetBool("AtacandoEspecial", true);
             ataqueEspecial = true;
-            Invoke(nameof(TempoEntreOAtaque), 1);
+            Invoke(nameof(TempoEntreOAtaqueEspecial), 3);
         }
         else
         {
@@ -122,6 +122,10 @@ public class PaladinoScript : PlayersManager
     public void TempoEntreOAtaque()
     {
         estaAtacando = false;
+    }
+
+    public void TempoEntreOAtaqueEspecial()
+    {
         ataqueEspecial = false;
     }
 
@@ -131,14 +135,6 @@ public class PaladinoScript : PlayersManager
     */
     public void BotoesDeInteracao()
     {
-        if (Input.GetButtonDown("UsarCura") && playerHud.pocoes > 0)
-        {
-            vidaAtual += playerHud.cura;
-            playerHud.pocoes--;
-            if (vidaAtual > vidaMaxima)
-            {
-                vidaAtual = vidaMaxima;
-            }
-        }
+   
     }
 }

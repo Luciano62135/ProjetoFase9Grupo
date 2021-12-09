@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class EspadaPaladino : MonoBehaviour
 {
@@ -9,18 +11,23 @@ public class EspadaPaladino : MonoBehaviour
     private float dano;
 
     public float danoMinimo, danoMaximo;
+
+    PhotonView pv;
     // Start is called before the first frame update
     void Start()
     {
-        
+        pv = GetComponent<PhotonView>();
     }
+
 
     // Update is called once per frame
     void Update()
     {
+        pv.RPC("OnTriggerEnter", RpcTarget.All);
         dano = Random.RandomRange(danoMinimo, danoMaximo);
     }
 
+    [PunRPC]
     private void OnTriggerEnter(Collider other)
     {
         paladino = GameObject.FindGameObjectWithTag("Player").GetComponent<PaladinoScript>();

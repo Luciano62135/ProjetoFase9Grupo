@@ -102,7 +102,7 @@ public class MachadoScript : PlayersManager
         {
             anim.SetBool("AtacandoNormal", true);
             estaAtacando = true;
-            Invoke(nameof(TempoEntreOAtaque), 1);
+            Invoke(nameof(TempoEntreOAtaque), 2);
         }
         else
         {
@@ -112,7 +112,7 @@ public class MachadoScript : PlayersManager
         {
             anim.SetBool("AtacandoEspecial", true);
             ataqueEspecial = true;
-            Invoke(nameof(TempoEntreOAtaque), 1);
+            Invoke(nameof(TempoEntreOAtaque), 3);
         }
         else
         {
@@ -123,6 +123,10 @@ public class MachadoScript : PlayersManager
     public void TempoEntreOAtaque()
     {
         estaAtacando = false;
+    }
+
+    public void TempoEntreOAtaqueEspecial()
+    {
         ataqueEspecial = false;
     }
 
@@ -131,14 +135,6 @@ public class MachadoScript : PlayersManager
     */
     public void BotoesDeInteracao()
     {
-        if (Input.GetButtonDown("UsarCura") && playerHud.pocoes > 0)
-        {
-            playerHud.pocoes--;
-            vidaAtual += playerHud.cura;
-            if (vidaAtual > vidaMaxima)
-            {
-                vidaAtual = vidaMaxima;
-            }
-        }
+
     }
 }

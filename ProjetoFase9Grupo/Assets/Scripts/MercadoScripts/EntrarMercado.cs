@@ -11,6 +11,8 @@ public class EntrarMercado : MonoBehaviour
     public GameObject entrarMercadoText;
     public bool estaNoMercado;
 
+    private MenuDePause menuDePause;
+
     [SerializeField]
     PhotonView pv;
 
@@ -23,12 +25,18 @@ public class EntrarMercado : MonoBehaviour
     void Start()
     {
         pv = GetComponent<PhotonView>();
+        menuDePause = FindObjectOfType<MenuDePause>().GetComponent<MenuDePause>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (menuDePause.estaNoPause == true)
+        {
+            mercado.SetActive(false);
+            entrarMercadoText.SetActive(false);
+        }
     }
 
     private void OnTriggerStay(Collider other)
