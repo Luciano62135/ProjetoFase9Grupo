@@ -130,8 +130,8 @@ public class Comprar : MonoBehaviour
             else if (numeroPesonagem == 2 && playerHud.moedas >= precoMelhoriaArma && numeroDeCompras >= 1)
             {
                 bolaDeFogo = GameObject.Find("BolaDeFogo").GetComponent<BolaDeFogo>();
-                espadaPaladino.danoMinimo += 5;
-                espadaPaladino.danoMaximo += 5;
+                bolaDeFogo.danoMinimo += 5;
+                bolaDeFogo.danoMaximo += 5;
                 playerHud.moedas -= precoMelhoriaArma;
                 numeroDeCompras--;
             }
