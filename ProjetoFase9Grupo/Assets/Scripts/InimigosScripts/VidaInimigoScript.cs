@@ -19,6 +19,7 @@ public class VidaInimigoScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pv = GetComponent<PhotonView>();
         vidaAtual = vidaMaxima;
         barraDeVida.SetarVidaMaxima(vidaMaxima);
     }
@@ -31,13 +32,13 @@ public class VidaInimigoScript : MonoBehaviour
 
     public void ChamarTakeDamage(float dano)
     {
-        pv.RPC("TakeDamage", RpcTarget.All);
+        pv.RPC("TakeDamage()", RpcTarget.All);
+        danoRecebido = dano;
     }
 
     [PunRPC]
     public void TakeDamage(float dano)
     {
-
         vidaAtual -= dano;
         FindObjectOfType<Audio__Manager>().Play("DanoNoEsqueleto");
         barraDeVida.SetarVida(vidaAtual);

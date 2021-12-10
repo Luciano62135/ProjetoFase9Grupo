@@ -23,7 +23,7 @@ public class EspadaPaladino : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pv.RPC("OnTriggerEnter", RpcTarget.All);
+        pv.RPC("OnTriggerEnter()", RpcTarget.All);
         dano = Random.RandomRange(danoMinimo, danoMaximo);
     }
 

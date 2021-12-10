@@ -37,7 +37,6 @@ public class VidaPlayer : PlayersManager
         }
     }
 
-    [PunRPC]
     public void TakeDamage(float dano)
     {
         vidaAtual -= dano;

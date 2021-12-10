@@ -37,7 +37,7 @@ public class Machado : MonoBehaviour
         }
         else if (other.tag == "InimigoEsqueleto" && caraDoMachado.ataqueEspecial == true)
         {
-            other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2);
+            other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2f);
         }
 
         if (other.tag == "InimigoGuarda" && caraDoMachado.estaAtacando == true)

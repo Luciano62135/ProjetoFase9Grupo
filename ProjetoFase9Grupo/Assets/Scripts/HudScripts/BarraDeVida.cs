@@ -14,7 +14,8 @@ public class BarraDeVida : MonoBehaviour
 
     PhotonView pv;
 
-    [PunRPC]
+    public float vidaRecebida;
+
     public void SetarVidaMaxima(float vida)
     {
         slider.maxValue = vida;
@@ -34,5 +35,11 @@ public class BarraDeVida : MonoBehaviour
     public void Update()
     {
 
+    }
+
+    public void SetarVidaAtual(float vida)
+    {
+        vidaRecebida = vida;
+        pv.RPC("SetarVida(float vida)", RpcTarget.All);
     }
 }
