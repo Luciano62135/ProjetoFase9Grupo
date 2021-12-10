@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DialogoManager : MonoBehaviour
 {
+    public bool chave1, chave2, chave3;
     public GameObject colisão1, colisão2, colisão3;
 
     public GameObject dialogo;
@@ -13,13 +14,13 @@ public class DialogoManager : MonoBehaviour
     public Text dialogoText;
 
     private DialogoColisão dialogoColisao;
+
     private MenuDePause menuDePause;
 
     private Queue<string> frases;
     // Start is called before the first frame update
     void Start()
     {
-        dialogoColisao = FindObjectOfType<DialogoColisão>().GetComponent<DialogoColisão>();
         menuDePause = FindObjectOfType<MenuDePause>().GetComponent<MenuDePause>();
 
         frases = new Queue<string>();
@@ -55,6 +56,7 @@ public class DialogoManager : MonoBehaviour
     {
         if (dialogoColisao.NumeroColisão == 1)
         {
+            chave1 = true;
             dialogoColisao.dialogoCompleto = true;
             dialogo.SetActive(false);
             colisão1.SetActive(false);
@@ -66,7 +68,16 @@ public class DialogoManager : MonoBehaviour
             dialogo.SetActive(false);
             colisão2.SetActive(false);
             colisão3.SetActive(true);
+            chave2 = true;
+            chave3 = true;
         }
+        else if (dialogoColisao.NumeroColisão == 3)
+        {
+            dialogoColisao.dialogoCompleto = true;
+            dialogo.SetActive(false);
+            colisão3.SetActive(false);
+        }
+
     }
 
     public void SairDialogo()
@@ -77,6 +88,7 @@ public class DialogoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        dialogoColisao = FindObjectOfType<DialogoColisão>().GetComponent<DialogoColisão>();
         if (Input.GetKeyDown(KeyCode.E) && dialogoColisao.dialoEstaAberto == true)
         {
             DisplayNextSentence();

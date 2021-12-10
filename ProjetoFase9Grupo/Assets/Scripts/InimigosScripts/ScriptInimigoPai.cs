@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class ScriptInimigoPai : MonoBehaviour
 {
     //Componentes
-    public Animator esqueletoAnim;
     public NavMeshAgent agent;
 
     //Layers

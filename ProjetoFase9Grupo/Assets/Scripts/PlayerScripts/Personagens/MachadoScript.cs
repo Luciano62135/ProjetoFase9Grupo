@@ -25,28 +25,19 @@ public class MachadoScript : PlayersManager
     // Update is called once per frame
     void Update()
     {
-        if (pv.IsMine)
+        BotoesDeInteracao();
+        BotoesDeMovimento();
+
+        Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
+        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        float rayLenght;
+
+        if (groundPlane.Raycast(cameraRay, out rayLenght))
         {
-            BotoesDeInteracao();
-            BotoesDeMovimento();
+            Vector3 pontoPraOlhar = cameraRay.GetPoint(rayLenght);
+            Debug.DrawLine(cameraRay.origin, pontoPraOlhar, Color.blue);
 
-            Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
-            Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-            float rayLenght;
-
-            if (groundPlane.Raycast(cameraRay, out rayLenght))
-            {
-                Vector3 pontoPraOlhar = cameraRay.GetPoint(rayLenght);
-                Debug.DrawLine(cameraRay.origin, pontoPraOlhar, Color.blue);
-
-                transform.LookAt(new Vector3(pontoPraOlhar.x, transform.position.y, pontoPraOlhar.z));
-            }
-        }
-
-        if (!pv.IsMine)
-        {
-            camera.enabled = false;
-            playerHud.enabled = false;
+            transform.LookAt(new Vector3(pontoPraOlhar.x, transform.position.y, pontoPraOlhar.z));
         }
     }
 

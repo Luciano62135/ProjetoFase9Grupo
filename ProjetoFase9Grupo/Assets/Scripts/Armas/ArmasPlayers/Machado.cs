@@ -13,6 +13,8 @@ public class Machado : MonoBehaviour
 
     public float danoMinimo, danoMaximo;
 
+    public bool podeAtacar;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,23 +32,48 @@ public class Machado : MonoBehaviour
     {
         caraDoMachado = GameObject.Find("CaraDoMachado").GetComponent<MachadoScript>();
 
-        if (other.gameObject.tag == "InimigoEsqueleto" && caraDoMachado.estaAtacando == true)
+        if (other.gameObject.tag == "InimigoEsqueleto" && caraDoMachado.estaAtacando == true && podeAtacar == false)
         {
-
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
+            podeAtacar = true;
+            Invoke(nameof(delay), 1);
         }
-        else if (other.tag == "InimigoEsqueleto" && caraDoMachado.ataqueEspecial == true)
+        else if (other.tag == "InimigoEsqueleto" && caraDoMachado.ataqueEspecial == true && podeAtacar == false)
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2f);
+            podeAtacar = true;
+            Invoke(nameof(delay), 1);
         }
 
-        if (other.tag == "InimigoGuarda" && caraDoMachado.estaAtacando == true)
+        if (other.tag == "InimigoGuarda" && caraDoMachado.estaAtacando == true && podeAtacar == false)
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
+            podeAtacar = true;
+            Invoke(nameof(delay), 1);
         }
-        else if (other.tag == "InimigoGuarda" && caraDoMachado.ataqueEspecial == true)
+        else if (other.tag == "InimigoGuarda" && caraDoMachado.ataqueEspecial == true && podeAtacar == false)
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2);
+            podeAtacar = true;
+            Invoke(nameof(delay), 1);
         }
+
+        if (other.tag == "Boss" && caraDoMachado.estaAtacando == true && podeAtacar == false)
+        {
+            other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
+            podeAtacar = true;
+            Invoke(nameof(delay), 1);
+        }
+        else if (other.tag == "Boss" && caraDoMachado.ataqueEspecial == true && podeAtacar == false)
+        {
+            other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2);
+            podeAtacar = true;
+            Invoke(nameof(delay), 1);
+        }
+    }
+
+    public void delay()
+    {
+        podeAtacar = false;
     }
 }

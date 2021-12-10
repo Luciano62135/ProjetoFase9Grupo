@@ -8,6 +8,7 @@ TagManager:
   - InimigoGuarda
   - InimigoEsqueleto
   - CameraPlayer
+  - Boss
   layers:
   - Default
   - TransparentFX

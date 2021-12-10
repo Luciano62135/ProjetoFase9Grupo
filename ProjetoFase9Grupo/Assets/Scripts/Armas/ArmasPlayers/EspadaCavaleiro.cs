@@ -9,6 +9,8 @@ public class EspadaCavaleiro : MonoBehaviour
     CavaleiroScript cavaleiro;
     private float dano;
 
+    public bool podeAtacar;
+
     public float danoMinimo, danoMaximo;
 
     PhotonView pv;
@@ -21,11 +23,11 @@ public class EspadaCavaleiro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pv.RPC("OnTriggerEnter", RpcTarget.All);
+        //pv.RPC("OnTriggerEnter", RpcTarget.All);
         dano = Random.RandomRange(danoMinimo, danoMaximo);
     }
 
-    [PunRPC]
+    //[PunRPC]
     private void OnTriggerEnter(Collider other)
     {
         cavaleiro = GameObject.FindGameObjectWithTag("Player").GetComponent<CavaleiroScript>();
@@ -48,5 +50,23 @@ public class EspadaCavaleiro : MonoBehaviour
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2);
         }
+
+        if (other.tag == "Boss" && cavaleiro.estaAtacando == true && podeAtacar == false)
+        {
+            other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
+            podeAtacar = true;
+            Invoke(nameof(delay), 1);
+        }
+        else if (other.tag == "Boss" && cavaleiro.ataqueEspecial == true && podeAtacar == false)
+        {
+            other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2);
+            podeAtacar = true;
+            Invoke(nameof(delay), 1);
+        }
+    }
+
+    public void delay()
+    {
+        podeAtacar = false;
     }
 }

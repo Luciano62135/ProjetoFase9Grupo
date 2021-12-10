@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
+public class EscolhaDePersonagens : MonoBehaviour
 {
     public int numeroPersonagem = 0;
 
@@ -36,25 +36,25 @@ public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
                 Comecar();
                 break;
             case 1:
-                PhotonNetwork.Instantiate(paladino.name, new Vector3(-4, 0, -27), Quaternion.Euler(0, 0, 0), 0);
+                Instantiate(paladino, new Vector3(-4, 0, 27), Quaternion.Euler(0, 0, 0));
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);
                 break;
             case 2:
-                PhotonNetwork.Instantiate(cavaleiro.name, new Vector3(-4, 0, 33), Quaternion.Euler(0,0,0), 0);
+                Instantiate(cavaleiro, new Vector3(-4, 0, 33), Quaternion.Euler(0,0,0));
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);
                 break;
             case 3:
-                PhotonNetwork.Instantiate(mago.name, new Vector3(8.5f, 0, 33), Quaternion.Euler(0,0,0), 0);
+                Instantiate(mago, new Vector3(14f, 0, 62), Quaternion.Euler(0,0,0));
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);
                 break;
             case 4:
-                PhotonNetwork.Instantiate(machado.name, new Vector3(8.5f, 0, 27f), Quaternion.Euler(0,0,0), 0);
+                Instantiate(machado, new Vector3(8.5f, 0, 27f), Quaternion.Euler(0,0,0));
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);
@@ -90,5 +90,6 @@ public class EscolhaDePersonagens : MonoBehaviourPunCallbacks
     {
         depthCamera = -1;
         mainCamera.depth = Camera.main.depth - 2;
+        mainCamera.enabled = false;
     }
 }

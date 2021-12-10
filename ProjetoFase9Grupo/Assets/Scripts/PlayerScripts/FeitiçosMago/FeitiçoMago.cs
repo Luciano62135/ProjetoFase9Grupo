@@ -21,13 +21,10 @@ public class FeitiçoMago : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pv.IsMine)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && estaAtacando == false)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) && estaAtacando == false)
-            {
-                Invoke(nameof(InvocarBolaDeFogo), 1.5f);
-                estaAtacando = true;
-            }
+            Invoke(nameof(InvocarBolaDeFogo), 1.5f);
+            estaAtacando = true;
         }
     }
 

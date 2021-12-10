@@ -78,6 +78,8 @@
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
+    <Compile Include="Assets\Scripts\Armas\ArmasInimigos\ArmaBoss.cs" />
+    <Compile Include="Assets\Scripts\Armas\ArmasInimigos\ArmaGuarda.cs" />
     <Compile Include="Assets\Scripts\Armas\ArmasInimigos\ArmasInimigosScript.cs" />
     <Compile Include="Assets\Scripts\Armas\ArmasPlayers\ArmaPlayer.cs" />
     <Compile Include="Assets\Scripts\Armas\ArmasPlayers\EspadaCavaleiro.cs" />
@@ -90,7 +92,9 @@
     <Compile Include="Assets\Scripts\HudScripts\BarraDeVida.cs" />
     <Compile Include="Assets\Scripts\HudScripts\InimigoBarraDeVida.cs" />
     <Compile Include="Assets\Scripts\HudScripts\PlayerHud.cs" />
+    <Compile Include="Assets\Scripts\InimigosScripts\InimigoBoss.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\InimigoEsqueleto.cs" />
+    <Compile Include="Assets\Scripts\InimigosScripts\InimigoGuarda.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\ScriptInimigoPai.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\VidaInimigoScript.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\Buttons.cs" />

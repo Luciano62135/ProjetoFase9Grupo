@@ -23,11 +23,11 @@ public class EspadaPaladino : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pv.RPC("OnTriggerEnter()", RpcTarget.All);
+        //pv.RPC("OnTriggerEnter()", RpcTarget.All);
         dano = Random.RandomRange(danoMinimo, danoMaximo);
     }
 
-    [PunRPC]
+    //[PunRPC]
     private void OnTriggerEnter(Collider other)
     {
         paladino = GameObject.FindGameObjectWithTag("Player").GetComponent<PaladinoScript>();

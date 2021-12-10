@@ -7,6 +7,7 @@ using Photon.Realtime;
 
 public class InimigoEsqueleto : ScriptInimigoPai
 {
+    public Animator esqueletoAnim;
     public bool estaAtacando = false;
 
     PhotonView pv;
@@ -17,8 +18,6 @@ public class InimigoEsqueleto : ScriptInimigoPai
 
     public void Update()
     {
-        FaceTarget();
-
         numeroDoAtaque = Random.RandomRange(1, 2);
         
         posicaoPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
@@ -28,13 +27,15 @@ public class InimigoEsqueleto : ScriptInimigoPai
 
         if (distance <= alcanceDeVisao && estaAtacando == false)
         {
+            FaceTarget();
+            alcanceDeVisao = 10;
             agent.SetDestination(posicaoPlayer);
             agent.stoppingDistance = 2;
             esqueletoAnim.SetBool("Andando", true);
-            FaceTarget();
 
             if (distance <= agent.stoppingDistance)
             {
+                FaceTarget();
                 if (numeroDoAtaque == 1)
                 {
                     esqueletoAnim.SetBool("Andando", false);
@@ -60,6 +61,7 @@ public class InimigoEsqueleto : ScriptInimigoPai
         else
         {
             esqueletoAnim.SetBool("Andando", false);
+            esqueletoAnim.SetBool("Atacando", false);
         }
     }
 
@@ -74,7 +76,7 @@ public class InimigoEsqueleto : ScriptInimigoPai
     {
         Vector3 direction = (posicaoPlayer - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 18f);
     }
 
 
