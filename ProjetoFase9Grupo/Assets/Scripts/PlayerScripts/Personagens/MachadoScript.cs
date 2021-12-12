@@ -45,7 +45,7 @@ public class MachadoScript : PlayersManager
     {
         if (Input.GetKey(KeyCode.W) && estaAtacando == false)
         {
-            transform.Translate(new Vector3(0, 0, 4 * Time.deltaTime));
+            transform.Translate(new Vector3(0, 0, 2 * Time.deltaTime));
             anim.SetBool("AndandoFrente", true);
         }
         else
@@ -54,7 +54,7 @@ public class MachadoScript : PlayersManager
         }
         if (Input.GetKey(KeyCode.S) && estaAtacando == false)
         {
-            transform.Translate(new Vector3(0, 0, -4 * Time.deltaTime));
+            transform.Translate(new Vector3(0, 0, -2 * Time.deltaTime));
             anim.SetBool("AndandoTras", true);
         }
         else
@@ -63,7 +63,7 @@ public class MachadoScript : PlayersManager
         }
         if (Input.GetKey(KeyCode.D) && estaAtacando == false)
         {
-            transform.Translate(new Vector3(4 * Time.deltaTime, 0, 0));
+            transform.Translate(new Vector3(2 * Time.deltaTime, 0, 0));
             anim.SetBool("AndandoDireita", true);
         }
         else
@@ -72,7 +72,7 @@ public class MachadoScript : PlayersManager
         }
         if (Input.GetKey(KeyCode.A) && estaAtacando == false)
         {
-            transform.Translate(new Vector3(-4 * Time.deltaTime, 0, 0));
+            transform.Translate(new Vector3(-2 * Time.deltaTime, 0, 0));
             anim.SetBool("AndandoEsquerda", true);
         }
         else

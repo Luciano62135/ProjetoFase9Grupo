@@ -18,11 +18,12 @@ public class InimigoEsqueleto : ScriptInimigoPai
 
     public void Update()
     {
+        FaceTarget();
+
         numeroDoAtaque = Random.RandomRange(1, 2);
         
         posicaoPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
         
-
         float distance = Vector3.Distance(posicaoPlayer, transform.position);
 
         if (distance <= alcanceDeVisao && estaAtacando == false)
@@ -38,14 +39,17 @@ public class InimigoEsqueleto : ScriptInimigoPai
                 FaceTarget();
                 if (numeroDoAtaque == 1)
                 {
+                    FaceTarget();
+
                     esqueletoAnim.SetBool("Andando", false);
                     esqueletoAnim.SetBool("Atacando", true);
                     estaAtacando = true;
                     agent.isStopped = true;
                     Invoke(nameof(TempoEntreOAtaque), tempoEntreOAtaque);
                 }
-                if (numeroDoAtaque == 2)
+                else if (numeroDoAtaque == 2)
                 {
+                    FaceTarget();
                     esqueletoAnim.SetBool("Andando", false);
                     esqueletoAnim.SetBool("Atacando2", true);
                     agent.isStopped = true;

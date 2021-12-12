@@ -36,39 +36,39 @@ public class Machado : MonoBehaviour
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
             podeAtacar = true;
-            Invoke(nameof(delay), 1);
+            Invoke(nameof(delay), 1.5f);
         }
         else if (other.tag == "InimigoEsqueleto" && caraDoMachado.ataqueEspecial == true && podeAtacar == false)
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2f);
             podeAtacar = true;
-            Invoke(nameof(delay), 1);
+            Invoke(nameof(delay), 1.5f);
         }
 
         if (other.tag == "InimigoGuarda" && caraDoMachado.estaAtacando == true && podeAtacar == false)
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
             podeAtacar = true;
-            Invoke(nameof(delay), 1);
+            Invoke(nameof(delay), 1.5f);
         }
         else if (other.tag == "InimigoGuarda" && caraDoMachado.ataqueEspecial == true && podeAtacar == false)
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2);
             podeAtacar = true;
-            Invoke(nameof(delay), 1);
+            Invoke(nameof(delay), 1.5f);
         }
 
         if (other.tag == "Boss" && caraDoMachado.estaAtacando == true && podeAtacar == false)
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
             podeAtacar = true;
-            Invoke(nameof(delay), 1);
+            Invoke(nameof(delay), 1.5f);
         }
         else if (other.tag == "Boss" && caraDoMachado.ataqueEspecial == true && podeAtacar == false)
         {
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2);
             podeAtacar = true;
-            Invoke(nameof(delay), 1);
+            Invoke(nameof(delay), 1.5f);
         }
     }
 

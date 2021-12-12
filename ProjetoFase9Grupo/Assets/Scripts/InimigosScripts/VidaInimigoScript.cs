@@ -27,7 +27,7 @@ public class VidaInimigoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        chanceDaMoeda = Random.RandomRange(1, 2);
     }
 
     public void ChamarTakeDamage(float dano)
@@ -44,7 +44,6 @@ public class VidaInimigoScript : MonoBehaviour
         barraDeVida.SetarVida(vidaAtual);
         if (vidaAtual <= 0f)
         {
-            chanceDaMoeda = Random.RandomRange(1, 2);
             if (chanceDaMoeda == 1)
             {
                 Instantiate(moedaCobre, transform.position, transform.rotation);
