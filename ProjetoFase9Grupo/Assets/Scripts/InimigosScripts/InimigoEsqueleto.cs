@@ -18,8 +18,6 @@ public class InimigoEsqueleto : ScriptInimigoPai
 
     public void Update()
     {
-        FaceTarget();
-
         numeroDoAtaque = Random.RandomRange(1, 2);
         
         posicaoPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
@@ -39,8 +37,6 @@ public class InimigoEsqueleto : ScriptInimigoPai
                 FaceTarget();
                 if (numeroDoAtaque == 1)
                 {
-                    FaceTarget();
-
                     esqueletoAnim.SetBool("Andando", false);
                     esqueletoAnim.SetBool("Atacando", true);
                     estaAtacando = true;
@@ -49,7 +45,6 @@ public class InimigoEsqueleto : ScriptInimigoPai
                 }
                 else if (numeroDoAtaque == 2)
                 {
-                    FaceTarget();
                     esqueletoAnim.SetBool("Andando", false);
                     esqueletoAnim.SetBool("Atacando2", true);
                     agent.isStopped = true;

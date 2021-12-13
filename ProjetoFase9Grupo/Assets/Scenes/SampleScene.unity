@@ -11934,7 +11934,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &1023969448
 CapsuleCollider:
@@ -14864,7 +14864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1423648101
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17091,6 +17091,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.022329438
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142391631077837981, guid: 7fcf9d363be1fa847ba8185665e31618,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 1142391631077837983, guid: 7fcf9d363be1fa847ba8185665e31618,
         type: 3}
