@@ -32,43 +32,41 @@ public class Machado : MonoBehaviour
     {
         caraDoMachado = GameObject.Find("CaraDoMachado").GetComponent<MachadoScript>();
 
-        if (other.gameObject.tag == "InimigoEsqueleto" && caraDoMachado.estaAtacando == true && podeAtacar == false)
+        if (other.tag == "InimigoEsqueleto" && caraDoMachado.estaAtacando == true && podeAtacar == false)
         {
+            FindObjectOfType<Audio__Manager>().Play("DanoNoEsqueleto");
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
-            podeAtacar = true;
-            Invoke(nameof(delay), 1.5f);
         }
         else if (other.tag == "InimigoEsqueleto" && caraDoMachado.ataqueEspecial == true && podeAtacar == false)
         {
-            other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2f);
-            podeAtacar = true;
-            Invoke(nameof(delay), 1.5f);
+            FindObjectOfType<Audio__Manager>().Play("DanoNoEsqueleto");
+            other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2);
         }
 
         if (other.tag == "InimigoGuarda" && caraDoMachado.estaAtacando == true && podeAtacar == false)
         {
+            FindObjectOfType<Audio__Manager>().Play("DanoGuarda");
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
-            podeAtacar = true;
-            Invoke(nameof(delay), 1.5f);
         }
         else if (other.tag == "InimigoGuarda" && caraDoMachado.ataqueEspecial == true && podeAtacar == false)
         {
+            FindObjectOfType<Audio__Manager>().Play("DanoGuarda");
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2);
-            podeAtacar = true;
-            Invoke(nameof(delay), 1.5f);
         }
 
         if (other.tag == "Boss" && caraDoMachado.estaAtacando == true && podeAtacar == false)
         {
+            FindObjectOfType<Audio__Manager>().Play("DanoBoss");
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
             podeAtacar = true;
-            Invoke(nameof(delay), 1.5f);
+            Invoke(nameof(delay), 1);
         }
         else if (other.tag == "Boss" && caraDoMachado.ataqueEspecial == true && podeAtacar == false)
         {
+            FindObjectOfType<Audio__Manager>().Play("DanoBoss");
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano * 2);
             podeAtacar = true;
-            Invoke(nameof(delay), 1.5f);
+            Invoke(nameof(delay), 1);
         }
     }
 

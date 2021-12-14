@@ -11,58 +11,72 @@ public class InimigoBoss : ScriptInimigoPai
 
     public float tempoTerminarAtaque;
 
+    public bool estaMorto;
+
+    public GameObject ganhou;
+
     public void Start()
     {
+        estaMorto = false;
         bossAnim = GetComponent<Animator>();
     }
 
     public void Update()
     {
-        posicaoPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
-
-        float distance = Vector3.Distance(posicaoPlayer, transform.position);
-
-        if (distance <= alcanceDeVisao && estaAtacando == false)
+        if (estaMorto == false)
         {
-            FaceTarget();
-            alcanceDeVisao = 10;
-            agent.SetDestination(posicaoPlayer);
-            agent.stoppingDistance = 2;
-            bossAnim.SetBool("Andando", true);
+            posicaoPlayer = GameObject.FindGameObjectWithTag("Player").transform.position;
 
-            if (distance <= agent.stoppingDistance && podeAtacar == false)
+            float distance = Vector3.Distance(posicaoPlayer, transform.position);
+
+            if (distance <= alcanceDeVisao && estaAtacando == false)
             {
                 FaceTarget();
-                numeroDoAtaque = Random.RandomRange(1, 3);
-                if (numeroDoAtaque == 1 && podeAtacar == false)
+                alcanceDeVisao = 10;
+                agent.SetDestination(posicaoPlayer);
+                agent.stoppingDistance = 2;
+                bossAnim.SetBool("Andando", true);
+
+                if (distance <= agent.stoppingDistance && podeAtacar == false)
                 {
-                    bossAnim.SetBool("Andando", false);
-                    bossAnim.SetBool("Atacando1", true);
-                    estaAtacando = true;
-                    agent.isStopped = true;
-                    podeAtacar = true;
-                    Invoke(nameof(TempoEntreOAtaque), tempoEntreOAtaque);
-                    Invoke(nameof(EstaAtacando), tempoTerminarAtaque);
-                }
-                else if (numeroDoAtaque == 2 && podeAtacar == false)
-                {
-                    bossAnim.SetBool("Andando", false);
-                    bossAnim.SetBool("Atacando2", true);
-                    agent.isStopped = true;
-                    estaAtacando = true;
-                    podeAtacar = true;
-                    Invoke(nameof(TempoEntreOAtaque), tempoEntreOAtaque);
-                    Invoke(nameof(EstaAtacando), tempoTerminarAtaque);
-                }
-                else if (numeroDoAtaque == 3 && distance >= 3 && podeAtacar == false)
-                {
-                    bossAnim.SetBool("Andando", false);
-                    bossAnim.SetBool("Atacando3", true);
-                    agent.isStopped = true;
-                    estaAtacando = true;
-                    podeAtacar = true;
-                    Invoke(nameof(TempoEntreOAtaque), tempoEntreOAtaque);
-                    Invoke(nameof(EstaAtacando), tempoTerminarAtaque);
+                    FaceTarget();
+                    numeroDoAtaque = Random.RandomRange(1, 3);
+                    if (numeroDoAtaque == 1 && podeAtacar == false)
+                    {
+                        bossAnim.SetBool("Andando", false);
+                        bossAnim.SetBool("Atacando1", true);
+                        estaAtacando = true;
+                        agent.isStopped = true;
+                        podeAtacar = true;
+                        Invoke(nameof(TempoEntreOAtaque), tempoEntreOAtaque);
+                        Invoke(nameof(EstaAtacando), tempoTerminarAtaque);
+                    }
+                    else if (numeroDoAtaque == 2 && podeAtacar == false)
+                    {
+                        bossAnim.SetBool("Andando", false);
+                        bossAnim.SetBool("Atacando2", true);
+                        agent.isStopped = true;
+                        estaAtacando = true;
+                        podeAtacar = true;
+                        Invoke(nameof(TempoEntreOAtaque), tempoEntreOAtaque);
+                        Invoke(nameof(EstaAtacando), tempoTerminarAtaque);
+                    }
+                    else if (numeroDoAtaque == 3 && distance >= 3 && podeAtacar == false)
+                    {
+                        bossAnim.SetBool("Andando", false);
+                        bossAnim.SetBool("Atacando3", true);
+                        agent.isStopped = true;
+                        estaAtacando = true;
+                        podeAtacar = true;
+                        Invoke(nameof(TempoEntreOAtaque), tempoEntreOAtaque);
+                        Invoke(nameof(EstaAtacando), tempoTerminarAtaque);
+                    }
+                    else
+                    {
+                        bossAnim.SetBool("Atacando1", false);
+                        bossAnim.SetBool("Atacando2", false);
+                        bossAnim.SetBool("Atacando3", false);
+                    }
                 }
                 else
                 {
@@ -73,15 +87,13 @@ public class InimigoBoss : ScriptInimigoPai
             }
             else
             {
-                bossAnim.SetBool("Atacando1", false);
-                bossAnim.SetBool("Atacando2", false);
-                bossAnim.SetBool("Atacando3", false);
+                bossAnim.SetBool("Andando", false);
+                bossAnim.SetBool("Atacando", false);
             }
         }
         else
         {
-            bossAnim.SetBool("Andando", false);
-            bossAnim.SetBool("Atacando", false);
+            ganhou.SetActive(true);
         }
     }
 

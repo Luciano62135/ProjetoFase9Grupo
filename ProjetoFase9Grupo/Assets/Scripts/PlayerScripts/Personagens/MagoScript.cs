@@ -12,6 +12,8 @@ public class MagoScript : PlayersManager
     private PlayerHud playerHud;
     private Rigidbody rig;
     private Camera camera;
+    private MenuDePause menuDePause;
+    private InimigoBoss boss;
 
     void Start()
     {
@@ -20,26 +22,44 @@ public class MagoScript : PlayersManager
         rig = GetComponent<Rigidbody>();
         camera = FindObjectOfType<Camera>();
         anim = GetComponent<Animator>();
+        menuDePause = FindObjectOfType<MenuDePause>();
+        boss = FindObjectOfType<InimigoBoss>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        BotoesDeInteracao();
-        BotoesDeMovimento();
-
-        Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-        float rayLenght;
-
-        if (groundPlane.Raycast(cameraRay, out rayLenght))
+        if (estaMorto == false)
         {
-            Vector3 pontoPraOlhar = cameraRay.GetPoint(rayLenght);
-            Debug.DrawLine(cameraRay.origin, pontoPraOlhar, Color.blue);
+            if (menuDePause.estaNoPause == false || boss.estaMorto == false)
+            {
+                BotoesDeInteracao();
+                BotoesDeMovimento();
 
-            transform.LookAt(new Vector3(pontoPraOlhar.x, transform.position.y, pontoPraOlhar.z));
+                Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
+                Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+                float rayLenght;
+
+                if (groundPlane.Raycast(cameraRay, out rayLenght))
+                {
+                    Vector3 pontoPraOlhar = cameraRay.GetPoint(rayLenght);
+                    Debug.DrawLine(cameraRay.origin, pontoPraOlhar, Color.blue);
+
+                    transform.LookAt(new Vector3(pontoPraOlhar.x, transform.position.y, pontoPraOlhar.z));
+                }
+            }
         }
+        else
+        {
+            anim.SetBool("EstaMorto", true);
+            Invoke(nameof(morrendo), 4);
+        }
+    }
 
+    public void morrendo()
+    {
+        CapsuleCollider capsule = this.GetComponent<CapsuleCollider>();
+        capsule.direction = 3;
     }
 
     public void BotoesDeMovimento()

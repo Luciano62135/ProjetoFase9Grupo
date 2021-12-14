@@ -8,7 +8,7 @@ public class PocoesGeral : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerhud = GameObject.Find("Canvas").GetComponent<PlayerHud>();
+        playerhud = GameObject.Find("CanvasGeral").GetComponent<PlayerHud>();
     }
 
     public void OnTriggerStay(Collider other)

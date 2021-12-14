@@ -8,26 +8,34 @@ public class MenuDePause : MonoBehaviour
     public GameObject menuDePause, playerHud, configuracoes;
     public bool estaNoPause = false;
 
+    private EscolhaDePersonagens escolhaPersonagem;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        estaNoPause = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.P) && estaNoPause == false)
+        escolhaPersonagem = FindObjectOfType<EscolhaDePersonagens>().GetComponent<EscolhaDePersonagens>();
+        if (escolhaPersonagem.estaEscolhendo == false)
         {
-            playerHud.SetActive(false);
-            menuDePause.SetActive(true);
-            estaNoPause = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.P) && estaNoPause == true)
-        {
-            playerHud.SetActive(true);
-            menuDePause.SetActive(false);
-            estaNoPause = false;
+            if (Input.GetKeyUp(KeyCode.P) && estaNoPause == false)
+            {
+                playerHud.SetActive(false);
+                menuDePause.SetActive(true);
+                estaNoPause = true;
+            }
+            else if (Input.GetKeyUp(KeyCode.P) && estaNoPause == true)
+            {
+                playerHud.SetActive(true);
+                menuDePause.SetActive(false);
+                configuracoes.SetActive(false);
+                estaNoPause = false;
+            }
         }
     }
 

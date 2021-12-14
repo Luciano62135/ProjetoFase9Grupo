@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\HudScripts\BarraDeVida.cs" />
     <Compile Include="Assets\Scripts\HudScripts\InimigoBarraDeVida.cs" />
     <Compile Include="Assets\Scripts\HudScripts\PlayerHud.cs" />
+    <Compile Include="Assets\Scripts\HudScripts\TelaDerrota.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\InimigoBoss.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\InimigoEsqueleto.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\InimigoGuarda.cs" />

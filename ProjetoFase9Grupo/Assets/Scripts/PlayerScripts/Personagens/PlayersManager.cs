@@ -15,8 +15,9 @@ public class PlayersManager : MonoBehaviour
     public float vidaAtual;
     public float vidaMaxima = 100;
     public BarraDeVida barraDeVida;
+	public bool estaMorto;
 
-    public void Start()
+	public void Start()
     {
         
     }

@@ -19,10 +19,12 @@ public class EscolhaDePersonagens : MonoBehaviour
     public GameObject cavaleiro;
     public GameObject mago;
     public GameObject machado;
+
+    public bool estaEscolhendo = true;
     // Start is called before the first frame update
     void Start()
     {
-        
+        estaEscolhendo = true;
     }
 
     public void Comecar()
@@ -40,24 +42,28 @@ public class EscolhaDePersonagens : MonoBehaviour
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);
+                estaEscolhendo = false;
                 break;
             case 2:
                 Instantiate(cavaleiro, new Vector3(-4, 0, 33), Quaternion.Euler(0,0,0));
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);
+                estaEscolhendo = false;
                 break;
             case 3:
                 Instantiate(mago, new Vector3(14f, 0, 62), Quaternion.Euler(0,0,0));
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);
+                estaEscolhendo = false;
                 break;
             case 4:
                 Instantiate(machado, new Vector3(8.5f, 0, 27f), Quaternion.Euler(0,0,0));
                 playerHud.SetActive(true);
                 escolhaHUD.SetActive(false);
                 Invoke(nameof(TempoPraTrocarDeCamera), 1);
+                estaEscolhendo = false;
                 break;
         }
     }

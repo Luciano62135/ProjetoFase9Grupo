@@ -100,6 +100,7 @@ MonoBehaviour:
   dano: 0
   danoMinimo: 15
   danoMaximo: 20
+  podeAtacar: 0
 --- !u!1 &6572200371407325620
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +266,7 @@ MonoBehaviour:
   vidaAtual: 0
   vidaMaxima: 100
   barraDeVida: {fileID: 0}
+  estaMorto: 0
 --- !u!114 &346960047963435599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +284,7 @@ MonoBehaviour:
   vidaAtual: 0
   vidaMaxima: 100
   barraDeVida: {fileID: 0}
+  estaMorto: 0
   pv: {fileID: 0}
   anim: {fileID: 4965595145891839314}
 --- !u!114 &4920252875718883805

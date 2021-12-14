@@ -10,6 +10,10 @@ public class VidaPlayer : PlayersManager
 
     PhotonView pv;
 
+    private MachadoScript player;
+
+    private EscolhaDePersonagens escolhaPersonagem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +27,7 @@ public class VidaPlayer : PlayersManager
     // Update is called once per frame
     void Update()
     {
-
+        escolhaPersonagem = FindObjectOfType<EscolhaDePersonagens>().GetComponent<EscolhaDePersonagens>();
         barraDeVida.SetarVida(vidaAtual);
 
         if (Input.GetButtonDown("UsarCura") && playerHud.pocoes > 0)
@@ -44,7 +48,26 @@ public class VidaPlayer : PlayersManager
         FindObjectOfType<Audio__Manager>().Play("DanoHumano");
         if (vidaAtual <= 0f)
         {
-            Destroy(this.gameObject);
+            if (escolhaPersonagem.numeroPersonagem == 1)
+            {
+                PaladinoScript paladino = FindObjectOfType<PaladinoScript>();
+                paladino.estaMorto = true;
+            }
+            else if (escolhaPersonagem.numeroPersonagem == 2)
+            {
+                CavaleiroScript cavaleiro = FindObjectOfType<CavaleiroScript>();
+                cavaleiro.estaMorto = true;
+            }
+            else if (escolhaPersonagem.numeroPersonagem == 3)
+            {
+                MagoScript mago = FindObjectOfType<MagoScript>();
+                mago.estaMorto = true;
+            }
+            else if (escolhaPersonagem.numeroPersonagem == 4)
+            {
+                MachadoScript machado = FindObjectOfType<MachadoScript>();
+                machado.estaMorto = true;
+            }
         }
     }
 }
