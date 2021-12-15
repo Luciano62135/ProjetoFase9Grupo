@@ -100,6 +100,7 @@
     <Compile Include="Assets\Scripts\InimigosScripts\Testes\Fighter.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\Testes\ScriptTesteInimigo.cs" />
     <Compile Include="Assets\Scripts\InimigosScripts\VidaInimigoScript.cs" />
+    <Compile Include="Assets\Scripts\InteraçãoCenario\AbrindoBau.cs" />
     <Compile Include="Assets\Scripts\InteraçãoCenario\Porta.cs" />
     <Compile Include="Assets\Scripts\InteraçãoCenario\SumindoPortas.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\Buttons.cs" />

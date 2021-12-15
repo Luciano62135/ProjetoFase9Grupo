@@ -24,7 +24,7 @@ public class BolaDeFogo : MonoBehaviour
     void Update()
     {
         rb.velocity = transform.right * velocidade;
-        dano = Random.RandomRange(danoMinimo, danoMaximo);
+        dano = Random.RandomRange(15, 18);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,10 +32,17 @@ public class BolaDeFogo : MonoBehaviour
         magoScript = GameObject.FindGameObjectWithTag("Player").GetComponent<MagoScript>();
         if (other.tag == "InimigoEsqueleto" && magoScript.estaAtacando == true)
         {
+            FindObjectOfType<Audio__Manager>().Play("DanoNoEsqueleto");
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
         }
-        if (other.tag == "InimigoGuarda" && magoScript.estaAtacando == true)
+        else if (other.tag == "InimigoGuarda" && magoScript.estaAtacando == true)
         {
+            FindObjectOfType<Audio__Manager>().Play("DanoGuarda");
+            other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
+        }
+        else if (other.tag == "Boss" && magoScript.estaAtacando == true)
+        {
+            FindObjectOfType<Audio__Manager>().Play("DanoBoss");
             other.gameObject.GetComponent<VidaInimigoScript>().TakeDamage(dano);
         }
     }

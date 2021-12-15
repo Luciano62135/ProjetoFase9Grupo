@@ -4694,8 +4694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 12
   mago: {fileID: 919132149155446097, guid: cb7ad013aeee4a440821c8086bf4e639, type: 3}
-  danoMinimo: 0
-  danoMaximo: 0
+  danoMinimo: 15
+  danoMaximo: 18
 --- !u!54 &1508108332
 Rigidbody:
   m_ObjectHideFlags: 0

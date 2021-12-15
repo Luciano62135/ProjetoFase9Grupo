@@ -42,7 +42,7 @@ public class Porta : MonoBehaviour
         }
         else if (other.tag == "Player" && Input.GetKey(KeyCode.E) && dialogoManager.chave2 == true && numeroPorta == 2)
         {
-            anim.SetBool("Abrir", false);
+            anim.SetBool("Abrir", true);
             porta2.SetActive(false);
         }
         else
@@ -67,7 +67,7 @@ public class Porta : MonoBehaviour
         }
         else if (other.tag == "Player" && Input.GetKey(KeyCode.E) && dialogoManager.chave2 == true && numeroPorta == 2)
         {
-            anim.SetBool("Abrir", false);
+            anim.SetBool("Abrir", true);
             porta2.SetActive(false);
         }
         else

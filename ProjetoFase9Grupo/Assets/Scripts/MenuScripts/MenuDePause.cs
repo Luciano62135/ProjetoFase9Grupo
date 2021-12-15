@@ -60,4 +60,9 @@ public class MenuDePause : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Creditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
 }
