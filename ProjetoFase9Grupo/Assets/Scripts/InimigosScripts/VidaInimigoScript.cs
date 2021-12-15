@@ -13,6 +13,10 @@ public class VidaInimigoScript : MonoBehaviour
     public GameObject moedaCobre;
     public int chanceDaMoeda;
 
+    public GameObject ganhou;
+
+    InimigoBoss boss;
+
     PhotonView pv;
 
     public float danoRecebido;
@@ -43,6 +47,14 @@ public class VidaInimigoScript : MonoBehaviour
         barraDeVida.SetarVida(vidaAtual);
         if (vidaAtual <= 0f)
         {
+            if (this.gameObject.tag == "Boss")
+            {
+                boss = FindObjectOfType<InimigoBoss>().GetComponent<InimigoBoss>();
+                boss.estaMorto = true;
+                ganhou.SetActive(true);
+            }
+
+
             if (chanceDaMoeda == 1)
             {
                 Instantiate(moedaCobre, transform.position, transform.rotation);
